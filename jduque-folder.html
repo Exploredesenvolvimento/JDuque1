@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JDuque Descartáveis — Folder Institucional</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{background:#e8ecf0;display:flex;justify-content:center;padding:40px 16px;min-height:100vh;}
+.folder{font-family:'Outfit',sans-serif;background:#F4F6F9;max-width:680px;width:100%;overflow:hidden;box-shadow:0 8px 48px rgba(0,0,0,0.18);}
+
+/* ── HERO ── */
+.hero{background:#0F2744;padding:40px 44px 0;position:relative;overflow:hidden;min-height:380px;}
+.hero-monogram{position:absolute;right:-30px;top:-20px;font-family:'Outfit',sans-serif;font-size:320px;font-weight:800;color:rgba(255,255,255,0.03);line-height:1;letter-spacing:-20px;user-select:none;pointer-events:none;}
+.hero-amber-line{position:absolute;left:0;top:0;width:4px;height:100%;background:#E8A020;}
+.hero-amber-dot{position:absolute;left:44px;bottom:0;width:80px;height:4px;background:#E8A020;}
+.logo-row{display:flex;align-items:center;gap:12px;margin-bottom:44px;position:relative;z-index:2;}
+.logo-mark{width:40px;height:40px;border-radius:8px;background:#E8A020;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.logo-name{font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1;}
+.logo-name .j{color:#E8A020;}
+.logo-sub{font-family:'Outfit',sans-serif;font-size:9px;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:4px;margin-top:2px;}
+.hero-content{position:relative;z-index:2;padding-bottom:52px;}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;}
+.eyebrow-line{width:20px;height:1px;background:#E8A020;}
+.eyebrow-text{font-size:11px;font-weight:600;color:#E8A020;letter-spacing:2.5px;text-transform:uppercase;}
+.hero-h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:700;color:#fff;line-height:1.05;margin-bottom:20px;max-width:460px;}
+.hero-h1 em{color:#E8A020;font-style:italic;}
+.hero-body{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;max-width:360px;margin-bottom:32px;}
+.hero-pills{display:flex;gap:8px;flex-wrap:wrap;}
+.pill{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.14);color:rgba(255,255,255,0.7);font-size:11px;font-weight:500;padding:5px 13px;border-radius:20px;letter-spacing:0.3px;}
+
+/* ── STATS ── */
+.stats-bar{background:#E8A020;padding:0 44px;display:grid;grid-template-columns:repeat(3,1fr);}
+.stat{padding:20px 0;border-right:0.5px solid rgba(15,39,68,0.15);padding-right:24px;}
+.stat:nth-child(2){padding-left:24px;}
+.stat:last-child{border-right:none;padding-left:24px;}
+.stat-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:700;color:#0F2744;line-height:1;}
+.stat-label{font-size:10px;font-weight:600;color:rgba(15,39,68,0.6);letter-spacing:0.5px;margin-top:3px;line-height:1.4;}
+
+/* ── PRODUTOS ── */
+.products-section{background:#0A1929;}
+.prod-header{padding:40px 44px 32px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:0.5px solid rgba(255,255,255,0.06);}
+.prod-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
+.prod-h2{font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.5px;}
+.header-count{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.2);text-align:right;line-height:1.8;}
+.hc-num{font-size:32px;font-weight:600;color:rgba(255,255,255,0.06);display:block;line-height:1;letter-spacing:-1px;}
+.table-header{display:grid;grid-template-columns:28px 180px 120px 1fr;padding:10px 44px;border-bottom:0.5px solid rgba(255,255,255,0.06);}
+.th-cell{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;color:rgba(255,255,255,0.18);letter-spacing:1.5px;text-transform:uppercase;padding:0 8px;}
+.th-cell:first-child{padding-left:0;}
+.linha-row{display:grid;grid-template-columns:28px 180px 120px 1fr;padding:0 44px;border-bottom:0.5px solid rgba(255,255,255,0.04);align-items:center;}
+.linha-row.featured{background:rgba(232,160,32,0.04);border-left:2px solid #E8A020;padding-left:42px;}
+.cell{padding:20px 8px;display:flex;align-items:center;}
+.cell:first-child{padding-left:0;}
+.cell-idx{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,0.15);font-weight:500;}
+.cell-idx.amber{color:rgba(232,160,32,0.5);}
+.cell-idx.teal{color:rgba(78,205,196,0.5);}
+.prod-tag{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:5px;}
+.prod-tag.amber{color:#E8A020;}
+.prod-tag.dim{color:rgba(255,255,255,0.2);}
+.prod-tag.teal{color:#4ECDC4;}
+.prod-name{font-size:16px;font-weight:800;color:#fff;letter-spacing:-0.3px;line-height:1;}
+.qual-badge{display:inline-flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;padding:10px 12px;border-radius:8px;text-align:center;width:96px;}
+.qual-badge.strong{background:rgba(232,160,32,0.08);border:0.5px solid rgba(232,160,32,0.25);}
+.qual-badge.daily{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.09);}
+.qual-text{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:0.5px;line-height:1.5;white-space:nowrap;}
+.qual-text.amber{color:#E8A020;}
+.qual-text.dim{color:rgba(255,255,255,0.3);}
+.sizes-featured{display:flex;gap:5px;flex-wrap:wrap;}
+.sz-block{display:flex;flex-direction:column;align-items:center;background:rgba(232,160,32,0.08);border:0.5px solid rgba(232,160,32,0.28);border-radius:6px;padding:7px 9px;min-width:44px;}
+.sz-block.dim{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);}
+.sz-block.teal-sz{background:rgba(78,205,196,0.06);border-color:rgba(78,205,196,0.25);}
+.sz-num{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:#E8A020;line-height:1;}
+.sz-num.dim{color:rgba(255,255,255,0.4);}
+.sz-num.teal{color:#4ECDC4;}
+.sz-unit{font-family:'JetBrains Mono',monospace;font-size:8px;color:rgba(232,160,32,0.45);letter-spacing:0.3px;margin-top:2px;}
+.sz-unit.dim{color:rgba(255,255,255,0.18);}
+.sz-unit.teal{color:rgba(78,205,196,0.4);}
+.coleta-row{padding:24px 44px;border-bottom:0.5px solid rgba(255,255,255,0.04);background:rgba(78,205,196,0.02);}
+.coleta-top{display:grid;grid-template-columns:28px 1fr;margin-bottom:14px;align-items:start;}
+.coleta-content{padding-left:8px;}
+.coleta-specs{padding-left:36px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;}
+.cs-item{border:0.5px solid rgba(255,255,255,0.06);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:5px;}
+.cs-bar{height:3px;border-radius:1px;}
+.cs-material{font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);}
+.cs-cor{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.2);letter-spacing:0.5px;}
+.prod-footer{padding:14px 44px;display:flex;align-items:center;justify-content:space-between;border-top:0.5px solid rgba(255,255,255,0.06);}
+.fb-note{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.15);letter-spacing:1px;}
+.fb-cta{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;color:#E8A020;letter-spacing:1.5px;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
+.fb-arrow{width:16px;height:1px;background:#E8A020;position:relative;display:inline-block;}
+.fb-arrow::after{content:'';position:absolute;right:-1px;top:-3px;width:0;height:0;border-left:5px solid #E8A020;border-top:3.5px solid transparent;border-bottom:3.5px solid transparent;}
+
+/* ── POR QUE ── */
+.why-section{background:#0F2744;padding:44px;position:relative;overflow:hidden;}
+.why-bg-num{position:absolute;right:-20px;bottom:-40px;font-family:'Cormorant Garamond',Georgia,serif;font-size:240px;font-weight:700;color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;user-select:none;}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;position:relative;z-index:1;}
+.why-item{border:0.5px solid rgba(255,255,255,0.08);border-radius:12px;padding:22px;}
+.why-item.accent{background:#E8A020;border-color:#E8A020;}
+.why-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;font-weight:700;color:#E8A020;line-height:1;margin-bottom:12px;}
+.why-item.accent .why-num{color:#0F2744;}
+.why-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:0.3px;margin-bottom:6px;}
+.why-item.accent .why-title{color:#0F2744;}
+.why-body{font-size:11px;color:rgba(255,255,255,0.45);line-height:1.7;}
+.why-item.accent .why-body{color:rgba(15,39,68,0.6);}
+
+/* ── PROMISE ── */
+.promise-section{background:#F4F6F9;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
+.promise-quote-mark{font-family:'Cormorant Garamond',Georgia,serif;font-size:96px;font-weight:700;color:#E8A020;line-height:0.6;margin-bottom:16px;display:block;}
+.promise-text{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600;color:#0F2744;line-height:1.45;margin-bottom:12px;font-style:italic;}
+.promise-sub{font-size:12px;color:#8A99AD;line-height:1.7;}
+.promise-right{background:#0F2744;border-radius:12px;padding:28px;}
+.promise-item{padding:14px 0;border-bottom:0.5px solid rgba(255,255,255,0.07);display:flex;align-items:flex-start;gap:12px;}
+.promise-item:last-child{border-bottom:none;padding-bottom:0;}
+.promise-item:first-child{padding-top:0;}
+.pi-dot{width:6px;height:6px;border-radius:50%;background:#E8A020;flex-shrink:0;margin-top:6px;}
+.pi-text{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;}
+.pi-text strong{color:#fff;font-weight:600;display:block;margin-bottom:2px;font-size:13px;}
+
+/* ── CTA ── */
+.cta-section{background:#E8A020;padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;}
+.cta-bg-jd{position:absolute;right:-16px;top:-24px;font-family:'Outfit',sans-serif;font-size:160px;font-weight:800;color:rgba(15,39,68,0.07);line-height:1;pointer-events:none;user-select:none;letter-spacing:-8px;}
+.cta-left h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:700;color:#0F2744;margin-bottom:4px;line-height:1.1;}
+.cta-left p{font-size:12px;color:rgba(15,39,68,0.6);}
+.cta-btn{background:#0F2744;color:#fff;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.5px;padding:14px 28px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;white-space:nowrap;flex-shrink:0;position:relative;z-index:1;}
+
+/* ── FOOTER ── */
+.folder-footer{background:#071A2E;padding:18px 44px;display:flex;align-items:center;justify-content:space-between;}
+.footer-logo{display:flex;align-items:center;gap:10px;}
+.footer-mark{width:28px;height:28px;border-radius:5px;background:#E8A020;display:flex;align-items:center;justify-content:center;}
+.footer-name{font-family:'Outfit',sans-serif;font-size:13px;font-weight:800;color:#fff;}
+.footer-name .j{color:#E8A020;}
+.footer-info{font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:0.5px;}
+</style>
+</head>
+<body>
+<div class="folder">
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-monogram">JD</div>
+    <div class="hero-amber-line"></div>
+    <div class="hero-amber-dot"></div>
+    <div class="logo-row">
+      <div class="logo-mark">
+        <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
+          <rect x="4" y="3" width="6" height="20" rx="2" fill="#0F2744"/>
+          <rect x="4" y="15" width="9" height="4" rx="1.5" fill="#fff"/>
+          <path d="M14 3 Q24 3 24 13 Q24 23 14 23 L14 17 Q20 17 20 13 Q20 9 14 9 Z" fill="#0F2744"/>
+        </svg>
+      </div>
+      <div>
+        <div class="logo-name"><span class="j">J</span>Duque</div>
+        <div class="logo-sub">Descartáveis</div>
+      </div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">
+        <span class="eyebrow-line"></span>
+        <span class="eyebrow-text">Rio de Janeiro</span>
+      </div>
+      <h1 class="hero-h1">O fornecedor que<br>não te deixa<br><em>na mão.</em></h1>
+      <p class="hero-body">Sacos de lixo e descartáveis com entrega programada para condomínios e empresas. Você define o dia — a gente garante o estoque.</p>
+      <div class="hero-pills">
+        <span class="pill">Entrega programada</span>
+        <span class="pill">Atendimento direto</span>
+        <span class="pill">Linha premium e econômica</span>
+        <span class="pill">Coleta seletiva</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STATS -->
+  <div class="stats-bar">
+    <div class="stat">
+      <div class="stat-num">+20k</div>
+      <div class="stat-label">Condomínios ativos<br>no Rio de Janeiro</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100%</div>
+      <div class="stat-label">Entrega no dia<br>combinado</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">2h</div>
+      <div class="stat-label">Tempo de resposta<br>em dias úteis</div>
+    </div>
+  </div>
+
+  <!-- PRODUTOS -->
+  <div class="products-section">
+    <div class="prod-header">
+      <div>
+        <div class="prod-eyebrow">
+          <span class="eyebrow-line"></span>
+          <span class="eyebrow-text">Especificações de produto</span>
+        </div>
+        <h2 class="prod-h2">Linha completa.<br>Especificações precisas.</h2>
+      </div>
+      <div class="header-count">
+        <span class="hc-num">03</span>
+        linhas disponíveis<br>
+        09 SKUs · Rio de Janeiro
+      </div>
+    </div>
+
+    <div class="table-header">
+      <div class="th-cell">#</div>
+      <div class="th-cell">Produto</div>
+      <div class="th-cell">Indicação</div>
+      <div class="th-cell">Capacidades disponíveis</div>
+    </div>
+
+    <div class="linha-row featured">
+      <div class="cell"><span class="cell-idx amber">01</span></div>
+      <div class="cell">
+        <div>
+          <div class="prod-tag amber">Premium · Reforçado</div>
+          <div class="prod-name">Alta Resistência</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="qual-badge strong">
+          <i class="ti ti-shield-check" style="font-size:18px;color:#E8A020;"></i>
+          <div class="qual-text amber">Alta resistência</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="sizes-featured">
+          <div class="sz-block"><span class="sz-num">60</span><span class="sz-unit">litros</span></div>
+          <div class="sz-block"><span class="sz-num">100</span><span class="sz-unit">litros</span></div>
+          <div class="sz-block"><span class="sz-num">200</span><span class="sz-unit">litros</span></div>
+          <div class="sz-block"><span class="sz-num">240</span><span class="sz-unit">litros</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="linha-row">
+      <div class="cell"><span class="cell-idx">02</span></div>
+      <div class="cell">
+        <div>
+          <div class="prod-tag dim">Econômica · Padrão</div>
+          <div class="prod-name">Custo-Benefício</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="qual-badge daily">
+          <i class="ti ti-sun" style="font-size:18px;color:rgba(255,255,255,0.25);"></i>
+          <div class="qual-text dim">Dia a dia</div>
+        </div>
+      </div>
+      <div class="cell">
+        <div class="sizes-featured">
+          <div class="sz-block dim"><span class="sz-num dim">20</span><span class="sz-unit dim">litros</span></div>
+          <div class="sz-block dim"><span class="sz-num dim">40</span><span class="sz-unit dim">litros</span></div>
+          <div class="sz-block dim"><span class="sz-num dim">60</span><span class="sz-unit dim">litros</span></div>
+          <div class="sz-block dim"><span class="sz-num dim">100</span><span class="sz-unit dim">litros</span></div>
+          <div class="sz-block dim"><span class="sz-num dim">200</span><span class="sz-unit dim">litros</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="coleta-row">
+      <div class="coleta-top">
+        <span class="cell-idx teal" style="padding-top:2px;">03</span>
+        <div class="coleta-content">
+          <div class="prod-tag teal">Coleta Seletiva · NBR 10.004</div>
+          <div class="prod-name" style="margin-bottom:6px;">Kit 5 Cores</div>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <div style="font-size:11px;color:rgba(255,255,255,0.35);line-height:1.6;">Separação de resíduos por categoria. Fornecimento mensal programado.</div>
+            <div class="sz-block teal-sz" style="flex-shrink:0;">
+              <span class="sz-num teal">100</span>
+              <span class="sz-unit teal">litros</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="coleta-specs">
+        <div class="cs-item"><div class="cs-bar" style="background:#3B82F6;"></div><div class="cs-material">Papel</div><div class="cs-cor">AZUL</div></div>
+        <div class="cs-item"><div class="cs-bar" style="background:#22C55E;"></div><div class="cs-material">Vidro</div><div class="cs-cor">VERDE</div></div>
+        <div class="cs-item"><div class="cs-bar" style="background:#EAB308;"></div><div class="cs-material">Metal</div><div class="cs-cor">AMARELO</div></div>
+        <div class="cs-item"><div class="cs-bar" style="background:#EF4444;"></div><div class="cs-material">Plástico</div><div class="cs-cor">VERMELHO</div></div>
+        <div class="cs-item"><div class="cs-bar" style="background:#A855F7;"></div><div class="cs-material">Orgânico</div><div class="cs-cor">ROXO</div></div>
+      </div>
+    </div>
+
+    <div class="prod-footer">
+      <span class="fb-note">REV 2026.1 · JDUQUE DESCARTÁVEIS · RIO DE JANEIRO</span>
+      <span class="fb-cta">Solicitar cotação <span class="fb-arrow"></span></span>
+    </div>
+  </div>
+
+  <!-- POR QUE -->
+  <div class="why-section">
+    <div class="hero-eyebrow" style="position:relative;z-index:1;">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Por que a JDuque</span>
+    </div>
+    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:700;color:#fff;line-height:1.1;position:relative;z-index:1;">Três razões que fazem<br>a diferença.</h2>
+    <div class="why-bg-num">3</div>
+    <div class="why-grid">
+      <div class="why-item accent">
+        <div class="why-num">01</div>
+        <div class="why-title">Entrega programada</div>
+        <div class="why-body">Você define a frequência. A gente entrega no dia combinado — sem precisar lembrar de pedir.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">02</div>
+        <div class="why-title">Fornecedor local</div>
+        <div class="why-body">Empresa carioca, atendimento direto. Sem call center — fala com quem resolve na hora.</div>
+      </div>
+      <div class="why-item">
+        <div class="why-num">03</div>
+        <div class="why-title">Produto certo</div>
+        <div class="why-body">Premium ou econômico. Indicamos o que faz sentido para o perfil do seu condomínio.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROMISE -->
+  <div class="promise-section">
+    <div>
+      <span class="promise-quote-mark">"</span>
+      <div class="promise-text">Saco de lixo não pode faltar. Por isso a entrega precisa ser certa — não aproximada.</div>
+      <div class="promise-sub">A JDuque trabalha com pedido programado porque síndico e administradora têm mais o que pensar do que controlar estoque de insumo básico.</div>
+    </div>
+    <div class="promise-right">
+      <div class="promise-item">
+        <div class="pi-dot"></div>
+        <div class="pi-text"><strong>Pedido mínimo R$ 80</strong>Entrega diretamente no condomínio ou empresa, no dia da sua rota.</div>
+      </div>
+      <div class="promise-item">
+        <div class="pi-dot"></div>
+        <div class="pi-text"><strong>Pagamento no recebimento</strong>Pix, dinheiro ou transferência. Sem burocracia.</div>
+      </div>
+      <div class="promise-item">
+        <div class="pi-dot"></div>
+        <div class="pi-text"><strong>Atendimento via WhatsApp</strong>Pedidos, dúvidas e cotações. Resposta em até 2 horas.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div class="cta-section">
+    <div class="cta-bg-jd">JD</div>
+    <div class="cta-left">
+      <h3>Solicite sua cotação agora.</h3>
+      <p>Respondemos em até 2 horas em dias úteis</p>
+    </div>
+    <a class="cta-btn" href="https://wa.me/55XXXXXXXXXXX" target="_blank">
+      <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
+        <path d="M13.5 2.5C12.2 1.2 10.4 0.5 8.5 0.5 4.4 0.5 1 3.8 1 7.9c0 1.3.3 2.6 1 3.7L1 15l4.5-1c1.1.6 2.3 1 3.5 1 4.1 0 7.5-3.3 7.5-7.5 0-1.9-.7-3.7-2-5z" stroke="white" stroke-width="1.2" fill="none"/>
+        <path d="M5.5 7.5s.5 1 1.5 2 2 1.5 2 1.5L10.5 9.5s1 .5 1.5.7V12s-2 1-4-0.5S4.5 7 4.5 6L6 5.5c.2.5.5 1.5.5 1.5z" fill="white"/>
+      </svg>
+      Falar no WhatsApp
+    </a>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="folder-footer">
+    <div class="footer-logo">
+      <div class="footer-mark">
+        <svg width="16" height="16" viewBox="0 0 26 26" fill="none">
+          <rect x="4" y="3" width="6" height="20" rx="2" fill="#0F2744"/>
+          <rect x="4" y="15" width="9" height="4" rx="1.5" fill="#fff"/>
+          <path d="M14 3 Q24 3 24 13 Q24 23 14 23 L14 17 Q20 17 20 13 Q20 9 14 9 Z" fill="#0F2744"/>
+        </svg>
+      </div>
+      <span class="footer-name"><span class="j">J</span>Duque Descartáveis</span>
+    </div>
+    <span class="footer-info">Rio de Janeiro</span>
+  </div>
+
+</div>
+</body>
+</html>
