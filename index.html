@@ -1,634 +1,2016 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JDuque Descartáveis</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
-<style>
-*{box-sizing:border-box;margin:0;padding:0;}
-body{background:#e8ecf0;display:flex;justify-content:center;padding:40px 16px;min-height:100vh;}
-.folder{font-family:'Outfit',sans-serif;background:#F4F6F9;max-width:680px;width:100%;overflow:hidden;box-shadow:0 8px 48px rgba(0,0,0,0.18);}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0A1628">
+  <title>JDuque Descartáveis — Fornecedor de Sacos de Lixo no Rio de Janeiro</title>
+  <meta name="description" content="Sacos de lixo e descartáveis com entrega programada para condomínios e empresas no Rio de Janeiro. Pedido mínimo R$80. Resposta em 2h.">
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800;900&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;1,9..40,400&display=swap" rel="stylesheet">
+  <noscript><style>.rv{opacity:1!important;transform:none!important;}</style></noscript>
+  <style>
+    /* ╔══════════════════════════════════════════╗
+       ║  SISTEMA DE DESIGN — JDUQUE v10          ║
+       ╚══════════════════════════════════════════╝ */
+    :root {
+      --ink:        #0A1628;
+      --ink-mid:    #162034;
+      --ink-soft:   #2C4560;
+      --ink-muted:  #607D93;
+      --amber:      #F0AD00;
+      --amber-l:    #FFCC33;
+      --amber-d:    #C88E00;
+      --green:      #22C55E;
+      --green-d:    #16A34A;
+      --bg:         #F5F4EF;
+      --surface:    #FFFFFF;
+      --border:     #E2E0D7;
+      --border-s:   #EDEBE4;
+      --txt:        #0A1628;
+      --body:       #374151;
+      --muted:      #6B7280;
+      --deco:       rgba(10,22,40,.055);
+      --fd: 'Barlow Condensed', sans-serif;
+      --fb: 'DM Sans', sans-serif;
+      --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px;
+      --s6:32px; --s7:48px; --s8:64px; --s9:80px; --s10:96px; --s11:128px;
+      --rsm:6px; --rmd:10px; --rlg:16px;
+      --tf: 150ms ease;
+      --tn: 250ms ease;
+      --ts: 420ms cubic-bezier(.22,.68,0,1.2);
+      --tr: 520ms ease;
+      --max: 1160px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; overflow-x: hidden; }
+    body { font-family: var(--fb); background: var(--bg); color: var(--body); line-height: 1.6; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 
-/* HERO */
-.hero{background:#0F2744;padding:40px 44px 0;position:relative;overflow:hidden;min-height:380px;}
-.hero-monogram{position:absolute;right:-30px;top:-20px;font-family:'Outfit',sans-serif;font-size:320px;font-weight:800;color:rgba(255,255,255,0.03);line-height:1;letter-spacing:-20px;user-select:none;pointer-events:none;}
-.hero-amber-line{position:absolute;left:0;top:0;width:4px;height:100%;background:#E8A020;}
-.hero-amber-dot{position:absolute;left:44px;bottom:0;width:80px;height:4px;background:#E8A020;}
-.logo-row{display:flex;align-items:center;gap:12px;margin-bottom:44px;position:relative;z-index:2;}
-.logo-mark{width:40px;height:40px;border-radius:8px;background:#E8A020;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
-.logo-name{font-family:'Outfit',sans-serif;font-size:20px;font-weight:800;color:#fff;letter-spacing:-0.5px;line-height:1;}
-.logo-name .j{color:#E8A020;}
-.logo-sub{font-family:'Outfit',sans-serif;font-size:9px;font-weight:600;color:rgba(255,255,255,0.4);letter-spacing:4px;margin-top:2px;}
-.hero-content{position:relative;z-index:2;padding-bottom:52px;}
-.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;}
-.eyebrow-line{width:20px;height:1px;background:#E8A020;}
-.eyebrow-text{font-size:11px;font-weight:600;color:#E8A020;letter-spacing:2.5px;text-transform:uppercase;}
-.hero-h1{font-family:'Cormorant Garamond',Georgia,serif;font-size:52px;font-weight:700;color:#fff;line-height:1.05;margin-bottom:20px;max-width:460px;}
-.hero-h1 em{color:#E8A020;font-style:italic;}
-.hero-body{font-size:13px;color:rgba(255,255,255,0.55);line-height:1.8;max-width:360px;margin-bottom:32px;}
-.hero-pills{display:flex;gap:8px;flex-wrap:wrap;}
-.pill{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.14);color:rgba(255,255,255,0.7);font-size:11px;font-weight:500;padding:5px 13px;border-radius:20px;letter-spacing:0.3px;}
+    /* ── LAYOUT ── */
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 var(--s8); }
+    @media(max-width:768px) { .wrap { padding: 0 var(--s5); } }
+    .sec  { padding: var(--s11) 0; }
+    .sec--alt  { background: var(--surface); }
+    .sec--dark { background: var(--ink); color: #fff; }
+    .sec--prod { background: var(--ink); padding: var(--s11) 0; }
+    @media(max-width:768px) { .sec, .sec--alt, .sec--dark, .sec--prod { padding: var(--s8) 0; } }
 
-/* STATS — novo visual */
-.stats-bar{
-  background:#0F2744;
-  padding:0 44px;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  border-bottom:0.5px solid rgba(255,255,255,0.06);
-}
-.stat{
-  padding:28px 0;
-  padding-right:32px;
-  border-right:0.5px solid rgba(255,255,255,0.06);
-  display:flex;
-  flex-direction:column;
-  gap:6px;
-}
-.stat:nth-child(2){padding-left:32px;}
-.stat:last-child{border-right:none;padding-left:32px;}
-.stat-icon{
-  width:32px;height:32px;
-  border-radius:7px;
-  background:rgba(232,160,32,0.1);
-  border:0.5px solid rgba(232,160,32,0.2);
-  display:flex;align-items:center;justify-content:center;
-  margin-bottom:4px;
-}
-.stat-num{
-  font-family:'Cormorant Garamond',Georgia,serif;
-  font-size:36px;font-weight:700;
-  color:#fff;line-height:1;letter-spacing:-0.5px;
-}
-.stat-num .stat-unit{
-  font-family:'JetBrains Mono',monospace;
-  font-size:13px;font-weight:500;
-  color:#E8A020;vertical-align:middle;
-  margin-left:2px;
-}
-.stat-title{
-  font-size:12px;font-weight:700;
-  color:rgba(255,255,255,0.8);
-  line-height:1.2;
-}
-.stat-sub{
-  font-size:10px;
-  color:rgba(255,255,255,0.3);
-  line-height:1.5;
-  letter-spacing:0.2px;
-}
-.stat-amber-dot{
-  width:4px;height:4px;border-radius:50%;
-  background:#E8A020;
-  display:inline-block;
-  margin-right:6px;
-  vertical-align:middle;
-}
+    /* scroll-margin: compensa header sticky */
+    #como-funciona, #produtos, #por-que, #faq, #contato { scroll-margin-top: 80px; }
 
-/* PRODUTOS */
-.products-section{background:#0A1929;}
-.prod-header{padding:40px 44px 32px;display:flex;align-items:flex-end;justify-content:space-between;border-bottom:0.5px solid rgba(255,255,255,0.06);}
-.prod-eyebrow{display:flex;align-items:center;gap:8px;margin-bottom:10px;}
-.prod-h2{font-family:'Outfit',sans-serif;font-size:28px;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-0.5px;}
-.header-count{font-family:'JetBrains Mono',monospace;font-size:11px;color:rgba(255,255,255,0.2);text-align:right;line-height:1.8;}
-.hc-num{font-size:32px;font-weight:600;color:rgba(255,255,255,0.06);display:block;line-height:1;letter-spacing:-1px;}
+    /* ── HEADER ── */
+    .hdr { position: sticky; top: 0; z-index: 200; background: rgba(10,22,40,.97); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.06); }
+    .hdr__row { display: flex; align-items: center; justify-content: space-between; height: 68px; gap: var(--s5); }
+    .logo { display: flex; align-items: center; gap: var(--s3); text-decoration: none; }
+    .logo__m {
+      width: 44px; height: 44px; background: var(--amber); border-radius: var(--rsm);
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .logo__n { font-family: var(--fd); font-weight: 700; font-size: 1.1rem; color: #fff; letter-spacing: .03em; display: block; line-height: 1.1; }
+    .logo__s { font-size: .68rem; color: rgba(255,255,255,.4); letter-spacing: .1em; text-transform: uppercase; display: block; }
+    .nav { display: flex; align-items: center; gap: var(--s7); }
+    .nav a { font-size: .875rem; color: rgba(255,255,255,.58); text-decoration: none; transition: color var(--tf); position: relative; }
+    .nav a:hover { color: #fff; }
+    .nav a.active { color: #fff; }
+    .nav a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--amber); border-radius: 2px; }
+    .hbtn {
+      display: inline-flex; align-items: center; gap: var(--s2);
+      background: var(--green); color: #fff; border: none; border-radius: var(--rmd);
+      font-family: var(--fb); font-size: .875rem; font-weight: 500;
+      padding: 10px 22px; min-height: 44px; cursor: pointer; text-decoration: none;
+      transition: background var(--tf), transform var(--tf);
+    }
+    .hbtn:hover { background: var(--green-d); transform: translateY(-1px); }
+    @media(max-width:480px) { .hbtn { padding: 10px 14px; } .hbtn__txt { display: none; } }
 
-.table-header{display:grid;grid-template-columns:28px 1fr 120px;padding:10px 44px;border-bottom:0.5px solid rgba(255,255,255,0.06);}
-.th-cell{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:500;color:rgba(255,255,255,0.18);letter-spacing:1.5px;text-transform:uppercase;padding:0 8px;}
-.th-cell:first-child{padding-left:0;}
-.th-cell:last-child{text-align:right;}
+    /* Hamburguer button */
+    .hbg { display: none; flex-direction: column; justify-content: space-between; width: 28px; height: 20px; background: none; border: none; cursor: pointer; padding: 0; flex-shrink: 0; }
+    .hbg span { display: block; width: 100%; height: 2px; background: #fff; border-radius: 2px; transition: transform var(--tn), opacity var(--tn); }
+    .hbg.open span:nth-child(1) { transform: translateY(9px) rotate(45deg); }
+    .hbg.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    .hbg.open span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); }
+    @media(max-width:900px) { .nav { display: none; } .hbg { display: flex; } }
+    @media(max-width:560px) { .logo__s, .logo__n { display: none; } }
+    @media(prefers-reduced-motion:reduce) { .hbtn:hover { transform: none; } }
 
-.linha-row{
-  display:grid;
-  grid-template-columns:28px 1fr 120px;
-  padding:0 44px;
-  border-bottom:0.5px solid rgba(255,255,255,0.04);
-  align-items:start;
-}
-.linha-row.featured{background:rgba(232,160,32,0.04);border-left:2px solid #E8A020;padding-left:42px;}
+    /* ── NAV OVERLAY MOBILE ── */
+    .nav-ov {
+      position: fixed; inset: 0; z-index: 190; background: var(--ink);
+      display: flex; flex-direction: column; padding: 84px var(--s6) var(--s8);
+      transform: translateX(100%); transition: transform var(--tn);
+      overflow-y: auto;
+    }
+    .nav-ov.open { transform: translateX(0); }
+    .nav-ov__links { display: flex; flex-direction: column; gap: var(--s4); margin-bottom: var(--s8); }
+    .nav-ov a { font-family: var(--fd); font-weight: 700; font-size: 2rem; color: rgba(255,255,255,.72); text-decoration: none; letter-spacing: .01em; transition: color var(--tf); }
+    .nav-ov a:hover { color: #fff; }
+    .nav-ov__meta { font-size: .875rem; color: rgba(255,255,255,.4); margin-top: auto; padding-top: var(--s6); border-top: 1px solid rgba(255,255,255,.08); }
+    .nav-ov__cta { margin-top: var(--s5); }
+    .nav-ov__cta .btn-wa { width: 100%; justify-content: center; }
 
-.cell{padding:24px 8px;display:flex;align-items:flex-start;}
-.cell:first-child{padding-left:0;padding-top:26px;}
-.cell:last-child{justify-content:flex-end;padding-top:26px;}
+    /* ── HERO ── */
+    .hero { position: relative; overflow: hidden; background: var(--ink); min-height: 100vh; display: flex; flex-direction: column; justify-content: center; }
+    .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+    .hero__cnt { position: relative; z-index: 2; padding: var(--s10) 0; }
+    .kicker { display: inline-flex; align-items: center; gap: var(--s2); background: rgba(240,173,0,.1); border: 1px solid rgba(240,173,0,.25); color: var(--amber-l); font-size: .75rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 5px 14px; border-radius: 100px; margin-bottom: var(--s6); white-space: nowrap; }
+    .kicker::before { content: ''; width: 6px; height: 6px; background: var(--amber); border-radius: 50%; flex-shrink: 0; }
+    .h1 { font-family: var(--fd); font-weight: 900; font-size: clamp(3.5rem,9vw,7rem); line-height: .93; letter-spacing: -.015em; color: #fff; margin-bottom: var(--s6); max-width: 800px; }
+    .h1 em { font-style: normal; color: var(--amber); }
+    .hero__sub { font-size: 1.125rem; color: rgba(255,255,255,.75); max-width: 480px; line-height: 1.75; margin-bottom: var(--s7); }
+    .hero__acts { display: flex; flex-wrap: wrap; gap: var(--s4); margin-bottom: var(--s9); }
+    .btn-wa { display: inline-flex; align-items: center; gap: var(--s2); background: var(--green); color: #fff; border-radius: var(--rmd); font-family: var(--fb); font-size: 1rem; font-weight: 500; padding: 14px 28px; min-height: 54px; text-decoration: none; border: 2px solid var(--green); transition: background var(--tn), transform var(--tn), box-shadow var(--tn); }
+    .btn-wa:hover { background: var(--green-d); border-color: var(--green-d); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(34,197,94,.3); }
+    .btn-gh { display: inline-flex; align-items: center; gap: var(--s2); background: transparent; color: #fff; border-radius: var(--rmd); font-family: var(--fb); font-size: 1rem; font-weight: 500; padding: 14px 28px; min-height: 54px; text-decoration: none; border: 2px solid rgba(255,255,255,.35); transition: background var(--tn), border-color var(--tn); }
+    .btn-gh:hover { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.7); }
+    .badges { display: flex; flex-wrap: wrap; gap: var(--s2); }
+    .badge { display: inline-flex; align-items: center; gap: 7px; background: rgba(255,255,255,.055); border: 1px solid rgba(255,255,255,.1); color: rgba(255,255,255,.72); font-size: .8rem; padding: 6px 14px; border-radius: 100px; }
+    .ck { color: var(--green); font-size: .75rem; }
+    @media(max-width:600px) { .hero { min-height: auto; } .h1 { font-size: clamp(2.8rem,14vw,4rem); line-height: 1.0; } .hero__acts { flex-direction: column; } .btn-wa, .btn-gh { justify-content: center; width: 100%; } }
+    @media(prefers-reduced-motion:reduce) { .btn-wa:hover, .btn-gh:hover { transform: none; box-shadow: none; } }
 
-.cell-idx{font-family:'JetBrains Mono',monospace;font-size:10px;color:rgba(255,255,255,0.15);font-weight:500;}
-.cell-idx.amber{color:rgba(232,160,32,0.5);}
-.cell-idx.teal{color:rgba(78,205,196,0.5);}
+    /* ── MÉTRICAS ── */
+    .mets { background: var(--amber); margin-top: -2px; }
+    .mets__g { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(0,0,0,.12); }
+    .met { background: var(--amber); padding: var(--s6) var(--s5); text-align: center; }
+    .met__v { font-family: var(--fd); font-weight: 900; font-size: 2.8rem; color: var(--ink); line-height: 1; margin-bottom: 4px; }
+    .met__l { font-size: .875rem; font-weight: 500; color: rgba(10,22,40,.75); }
+    .met__s { font-size: .75rem; color: rgba(10,22,40,.52); margin-top: 3px; }
+    @media(max-width:640px) { .mets__g { grid-template-columns: 1fr; } }
 
-/* PRODUTO INFO COM TAMANHOS INTEGRADOS */
-.prod-info{}
-.prod-tag{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px;}
-.prod-tag.amber{color:#E8A020;}
-.prod-tag.dim{color:rgba(255,255,255,0.2);}
-.prod-tag.teal{color:#4ECDC4;}
-.prod-name{font-size:18px;font-weight:800;color:#fff;letter-spacing:-0.3px;line-height:1;margin-bottom:16px;}
+    /* ── SECTION HEADER ── */
+    .sh { margin-bottom: var(--s8); }
+    .sh--c { text-align: center; }
+    .sh__lbl { display: inline-block; font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--amber-d); margin-bottom: var(--s4); }
+    .sh__lbl--lt { color: var(--amber-l); }
+    .sh__h2 { font-family: var(--fd); font-weight: 900; font-size: clamp(2rem,4vw,3rem); line-height: 1.02; letter-spacing: -.01em; color: var(--txt); }
+    .sh__h2 em { font-style: normal; color: var(--amber-d); }
+    .sh__h2--lt { color: #fff; }
+    .sh__h2--lt em { color: var(--amber-l); }
+    .sh__p { font-size: 1rem; color: var(--muted); margin-top: var(--s4); max-width: 520px; line-height: 1.7; }
+    .sh__p--lt { color: rgba(255,255,255,.58); }
+    .sh--c .sh__p { margin-left: auto; margin-right: auto; }
 
-/* TAMANHOS DENTRO DO PRODUTO */
-.sz-section{}
-.sz-section-label{
-  font-family:'JetBrains Mono',monospace;
-  font-size:8px;font-weight:600;
-  color:rgba(255,255,255,0.15);
-  letter-spacing:2px;text-transform:uppercase;
-  margin-bottom:8px;
-}
-.sz-row{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:0;}
-.sz-btn{
-  display:flex;flex-direction:column;align-items:center;
-  background:rgba(232,160,32,0.07);
-  border:0.5px solid rgba(232,160,32,0.25);
-  border-radius:7px;padding:8px 10px;min-width:48px;
-  cursor:pointer;
-  transition:all 0.15s;
-  position:relative;
-}
-.sz-btn:hover{background:rgba(232,160,32,0.15);border-color:rgba(232,160,32,0.5);transform:translateY(-1px);}
-.sz-btn.active{background:rgba(232,160,32,0.22);border-color:#E8A020;transform:translateY(-1px);}
-.sz-btn.active::after{
-  content:'';
-  position:absolute;
-  bottom:-8px;left:50%;transform:translateX(-50%);
-  width:0;height:0;
-  border-left:6px solid transparent;
-  border-right:6px solid transparent;
-  border-top:6px solid #E8A020;
-}
-.sz-btn.dim{background:rgba(255,255,255,0.04);border-color:rgba(255,255,255,0.1);}
-.sz-btn.dim:hover{background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.2);}
-.sz-btn.dim.active{background:rgba(255,255,255,0.1);border-color:rgba(255,255,255,0.3);}
-.sz-btn.dim.active::after{border-top-color:rgba(255,255,255,0.3);}
-.sz-num{font-family:'JetBrains Mono',monospace;font-size:14px;font-weight:600;color:#E8A020;line-height:1;}
-.sz-num.dim{color:rgba(255,255,255,0.4);}
-.sz-unit{font-family:'JetBrains Mono',monospace;font-size:7px;color:rgba(232,160,32,0.4);letter-spacing:0.3px;margin-top:2px;}
-.sz-unit.dim{color:rgba(255,255,255,0.15);}
+    /* ── STEPS ── */
+    .steps { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+    @media(max-width:768px) { .steps { grid-template-columns: 1fr; } }
+    .step { background: var(--surface); border: 1px solid var(--border); border-radius: var(--rlg); overflow: hidden; transition: box-shadow var(--tn), transform var(--tn); }
+    .step:hover { box-shadow: 0 8px 32px rgba(10,22,40,.09); transform: translateY(-3px); }
+    .step__t { font-family: var(--fd); font-weight: 700; font-size: 1.35rem; margin-bottom: var(--s3); color: var(--txt); }
+    .step__p { font-size: .9375rem; color: var(--muted); line-height: 1.65; }
+    @media(prefers-reduced-motion:reduce) { .step:hover { transform: none; } }
 
-/* PAINEL TÉCNICO */
-.sz-panel{
-  display:none;
-  margin-top:14px;
-  background:rgba(255,255,255,0.03);
-  border:0.5px solid rgba(255,255,255,0.07);
-  border-radius:10px;
-  overflow:hidden;
-  animation:slideDown 0.2s ease;
-}
-.sz-panel.visible{display:block;}
-@keyframes slideDown{from{opacity:0;transform:translateY(-6px);}to{opacity:1;transform:translateY(0);}}
-.sz-panel-header{
-  padding:10px 14px;
-  background:rgba(232,160,32,0.08);
-  border-bottom:0.5px solid rgba(232,160,32,0.15);
-  display:flex;align-items:center;gap:8px;
-}
-.sz-panel-header.dim{background:rgba(255,255,255,0.04);border-bottom-color:rgba(255,255,255,0.06);}
-.sz-panel-title{
-  font-family:'JetBrains Mono',monospace;
-  font-size:10px;font-weight:600;
-  color:#E8A020;letter-spacing:1px;
-}
-.sz-panel-title.dim{color:rgba(255,255,255,0.35);}
-.sz-panel-body{
-  padding:12px 14px;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-}
-.sz-spec{}
-.sz-spec-label{
-  font-family:'JetBrains Mono',monospace;
-  font-size:8px;color:rgba(255,255,255,0.18);
-  letter-spacing:1.5px;text-transform:uppercase;
-  margin-bottom:3px;
-}
-.sz-spec-value{
-  font-size:12px;font-weight:600;
-  color:rgba(255,255,255,0.65);
-  line-height:1.3;
-}
+    /* ── AUDIENCE CARDS ── */
+    .aud { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+    @media(max-width:768px) { .aud { grid-template-columns: 1fr; } }
+    .ac { border-radius: var(--rlg); overflow: hidden; border: 1px solid var(--border); transition: box-shadow var(--tn), transform var(--tn); }
+    .ac:hover { box-shadow: 0 12px 40px rgba(10,22,40,.1); transform: translateY(-3px); }
+    .ac__top { padding: var(--s7) var(--s6) var(--s5); background: var(--ink); color: #fff; position: relative; overflow: hidden; }
+    .ac__top::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: var(--ac-img, none);
+      background-size: cover;
+      background-position: center;
+      opacity: .16;
+      mix-blend-mode: luminosity;
+      pointer-events: none;
+      z-index: 0;
+      transition: opacity var(--tr);
+    }
+    .ac:hover .ac__top::before { opacity: .22; }
+    .ac__top > * { position: relative; z-index: 1; }
+    .ac__ico { width: 52px; height: 52px; margin-bottom: var(--s5); }
+    .ac__t { font-family: var(--fd); font-weight: 700; font-size: 1.45rem; margin-bottom: 4px; }
+    .ac__s { font-size: .82rem; color: rgba(255,255,255,.45); }
+    .ac__bod { background: var(--surface); padding: var(--s5) var(--s6); }
+    .ac__ul { list-style: none; display: flex; flex-direction: column; gap: var(--s3); }
+    .ac__ul li { display: flex; align-items: flex-start; gap: var(--s2); font-size: .9rem; color: var(--muted); line-height: 1.5; }
+    .ac__ul li::before { content: '→'; color: var(--amber-d); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+    @media(prefers-reduced-motion:reduce) { .ac:hover { transform: none; } }
 
-/* INDICAÇÃO */
-.qual-badge{
-  display:inline-flex;flex-direction:column;
-  align-items:center;justify-content:center;
-  gap:5px;padding:12px 10px;border-radius:8px;
-  text-align:center;width:96px;
-}
-.qual-badge.strong{background:rgba(232,160,32,0.08);border:0.5px solid rgba(232,160,32,0.25);}
-.qual-badge.daily{background:rgba(255,255,255,0.04);border:0.5px solid rgba(255,255,255,0.09);}
-.qual-text{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;letter-spacing:0.5px;line-height:1.5;}
-.qual-text.amber{color:#E8A020;}
-.qual-text.dim{color:rgba(255,255,255,0.3);}
+    /* ── PRODUCTS GRID ── */
+    .pg { display: grid; grid-template-columns: repeat(2,1fr); gap: var(--s5); }
+    @media(max-width:860px) { .pg { grid-template-columns: 1fr; } }
+    .pc { background: var(--surface); border: 1px solid var(--border); border-radius: var(--rlg); overflow: hidden; display: flex; flex-direction: column; transition: box-shadow var(--tn), transform var(--tn); position: relative; }
+    .pc:hover { box-shadow: 0 8px 32px rgba(10,22,40,.1); transform: translateY(-2px); }
+    .pc--fw { grid-column: 1/-1; }
+    .pc__hd { background: var(--ink); padding: var(--s6); display: flex; justify-content: space-between; align-items: flex-start; }
+    .pc__bdg { display: inline-block; background: rgba(240,173,0,.15); border: 1px solid rgba(240,173,0,.3); color: var(--amber-l); font-size: .68rem; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; padding: 3px 10px; border-radius: 100px; margin-bottom: var(--s3); }
+    .pc__ti { font-family: var(--fd); font-weight: 700; font-size: 1.5rem; color: #fff; margin-bottom: 3px; }
+    .pc__su { font-size: .8rem; font-weight: 500; color: rgba(255,255,255,.55); }
+    .pc__nm { font-family: var(--fd); font-weight: 900; font-size: 3.5rem; color: rgba(255,255,255,.06); line-height: 1; flex-shrink: 0; }
+    .pc__popular { position: absolute; top: 0; right: 20px; background: var(--amber); color: var(--ink); font-family: var(--fd); font-weight: 700; font-size: .7rem; letter-spacing: .07em; text-transform: uppercase; padding: 4px 12px 6px; border-radius: 0 0 8px 8px; }
+    @media(prefers-reduced-motion:reduce) { .pc:hover { transform: none; } }
 
-/* COLETA */
-.coleta-row{padding:24px 44px;border-bottom:0.5px solid rgba(255,255,255,0.04);background:rgba(78,205,196,0.02);}
-.coleta-top{display:grid;grid-template-columns:28px 1fr;margin-bottom:14px;align-items:start;}
-.coleta-content{padding-left:8px;}
-.coleta-specs{padding-left:36px;display:grid;grid-template-columns:repeat(5,1fr);gap:8px;}
-.cs-item{border:0.5px solid rgba(255,255,255,0.06);border-radius:4px;padding:10px;display:flex;flex-direction:column;gap:5px;}
-.cs-bar{height:3px;border-radius:1px;}
-.cs-material{font-size:11px;font-weight:700;color:rgba(255,255,255,0.6);}
-.cs-cor{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.2);letter-spacing:0.5px;}
+    /* ── BAG VISUALIZER ── */
+    .pc__bd { padding: 0; flex: 1; display: grid; grid-template-columns: 200px 1fr; }
+    @media(max-width:640px) { .pc__bd { grid-template-columns: 1fr; } }
+    .bag-col { --bag-scale: 1; display: flex; flex-direction: column; align-items: center; justify-content: flex-end; padding: var(--s5) var(--s3) var(--s4); border-right: 1px solid var(--border-s); gap: var(--s3); }
+    @media(max-width:640px) { .bag-col { --bag-scale: .62; flex-direction: row; justify-content: center; align-items: flex-end; border-right: none; border-bottom: 1px solid var(--border-s); padding: var(--s4) var(--s5); gap: var(--s5); } }
+    @media(max-width:400px) { .bag-col { --bag-scale: .52; } }
+    .bag-wrap { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; height: calc(220px * var(--bag-scale, 1)); flex-shrink: 0; }
+    .bag-knot { width: calc(var(--bk, 18px) * var(--bag-scale, 1)); height: calc(8px * var(--bag-scale, 1)); background: var(--amber); border-radius: 50%; box-shadow: 0 2px 8px rgba(240,173,0,.4); transition: width var(--ts), height var(--ts); flex-shrink: 0; z-index: 1; }
+    .bag-neck { width: calc(var(--bn, 30px) * var(--bag-scale, 1)); height: calc(10px * var(--bag-scale, 1)); background: rgba(240,173,0,.16); border: 1.5px solid rgba(240,173,0,.48); border-bottom: none; border-radius: 4px 4px 0 0; transition: width var(--ts), height var(--ts); flex-shrink: 0; }
+    .bag-body { width: calc(var(--bw, 55px) * var(--bag-scale, 1)); height: calc(var(--bh, 70px) * var(--bag-scale, 1)); background: rgba(240,173,0,.09); border: 2px solid rgba(240,173,0,.42); border-radius: 3px 3px 10px 10px; position: relative; overflow: hidden; transition: width var(--ts), height var(--ts); flex-shrink: 0; }
+    .bag-body::before { content: ''; position: absolute; top: 8%; left: 12%; width: 16%; height: 52%; background: rgba(255,255,255,.09); border-radius: 50%; }
+    .bag-body::after { content: ''; position: absolute; inset: 0; background: repeating-linear-gradient(to bottom, transparent 0, transparent 13px, rgba(240,173,0,.055) 13px, rgba(240,173,0,.055) 14px); }
+    .bag-info { display: flex; flex-direction: column; align-items: center; gap: 2px; text-align: center; }
+    @media(max-width:640px) { .bag-info { align-items: flex-start; text-align: left; } }
+    .bag-dims { font-family: var(--fd); font-weight: 700; font-size: .95rem; color: var(--amber-d); letter-spacing: .04em; transition: opacity .18s ease; }
+    .bag-ref { font-size: .8rem; color: var(--muted); line-height: 1.35; transition: opacity .18s ease; }
+    @media(max-width:640px) { .bag-ref { font-size: .8rem; } }
 
-.prod-footer{padding:14px 44px;display:flex;align-items:center;justify-content:space-between;border-top:0.5px solid rgba(255,255,255,0.06);}
-.fb-note{font-family:'JetBrains Mono',monospace;font-size:9px;color:rgba(255,255,255,0.15);letter-spacing:1px;}
-.fb-cta{font-family:'JetBrains Mono',monospace;font-size:9px;font-weight:600;color:#E8A020;letter-spacing:1.5px;text-transform:uppercase;display:flex;align-items:center;gap:8px;}
-.fb-arrow{width:16px;height:1px;background:#E8A020;position:relative;display:inline-block;}
-.fb-arrow::after{content:'';position:absolute;right:-1px;top:-3px;width:0;height:0;border-left:5px solid #E8A020;border-top:3.5px solid transparent;border-bottom:3.5px solid transparent;}
+    /* Indicador de escala de volume */
+    .bag-scale { display: flex; align-items: center; gap: var(--s2); width: 90%; max-width: 140px; }
+    @media(max-width:640px) { .bag-scale { display: none; } }
+    .bag-scale__lbl { font-size: .72rem; color: var(--muted); white-space: nowrap; }
+    .bag-scale__track { flex: 1; height: 3px; background: var(--border); border-radius: 2px; overflow: hidden; }
+    .bag-scale__fill { height: 100%; background: var(--amber); border-radius: 2px; transition: width var(--tn); width: 18%; }
 
-/* POR QUE */
-.why-section{background:#0F2744;padding:44px;position:relative;overflow:hidden;}
-.why-bg-num{position:absolute;right:-20px;bottom:-40px;font-family:'Cormorant Garamond',Georgia,serif;font-size:240px;font-weight:700;color:rgba(255,255,255,0.025);line-height:1;pointer-events:none;user-select:none;}
-.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px;position:relative;z-index:1;}
-.why-item{border:0.5px solid rgba(255,255,255,0.08);border-radius:12px;padding:22px;}
-.why-item.accent{background:#E8A020;border-color:#E8A020;}
-.why-num{font-family:'Cormorant Garamond',Georgia,serif;font-size:42px;font-weight:700;color:#E8A020;line-height:1;margin-bottom:12px;}
-.why-item.accent .why-num{color:#0F2744;}
-.why-title{font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;color:#fff;letter-spacing:0.3px;margin-bottom:6px;}
-.why-item.accent .why-title{color:#0F2744;}
-.why-body{font-size:11px;color:rgba(255,255,255,0.45);line-height:1.7;}
-.why-item.accent .why-body{color:rgba(15,39,68,0.6);}
+    /* Coluna specs */
+    .spec-col { padding: var(--s5); display: flex; flex-direction: column; }
+    .pnl-wrap { position: relative; height: 152px; overflow: hidden; flex: 1; }
+    .pnl { display: flex; flex-direction: column; position: absolute; top: 0; left: 0; right: 0; opacity: 0; transform: translateY(6px); transition: opacity .28s ease, transform .28s ease; pointer-events: none; }
+    .pnl.on { opacity: 1; transform: translateY(0); pointer-events: auto; }
+    @media(prefers-reduced-motion:reduce) { .pnl { transition: none; } .bag-knot, .bag-neck, .bag-body { transition: none; } }
+    .tabs { display: flex; flex-wrap: wrap; gap: var(--s2); margin-bottom: var(--s4); }
+    .tab { padding: 6px 14px; min-height: 36px; border: 1.5px solid var(--border); border-radius: var(--rsm); font-size: .875rem; font-weight: 500; background: none; color: var(--muted); cursor: pointer; font-family: var(--fb); transition: background var(--tf), border-color var(--tf), color var(--tf); }
+    .tab:hover { border-color: var(--ink-soft); color: var(--ink); }
+    .tab:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+    .tab.on { background: var(--ink); border-color: var(--ink); color: #fff; }
+    .sr { display: flex; justify-content: space-between; align-items: center; padding: 9px 0; border-bottom: 1px solid var(--border-s); font-size: .875rem; }
+    .sr:last-child { border: none; }
+    .sr__k { color: var(--muted); }
+    .sr__v { font-weight: 500; color: var(--txt); }
+    .pc__ft { padding: 0 var(--s5) var(--s5); }
+    .btn-line { display: flex; justify-content: center; align-items: center; gap: var(--s2); width: 100%; padding: 11px; min-height: 46px; background: var(--green); color: #fff; border-radius: var(--rmd); font-family: var(--fb); font-size: .9rem; font-weight: 500; text-decoration: none; border: none; transition: background var(--tn), transform var(--tn); }
+    .btn-line:hover { background: var(--green-d); transform: translateY(-1px); }
+    @media(prefers-reduced-motion:reduce) { .btn-line:hover { transform: none; } }
 
-/* PROMISE */
-.promise-section{background:#F4F6F9;padding:44px;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;}
-.promise-quote-mark{font-family:'Cormorant Garamond',Georgia,serif;font-size:96px;font-weight:700;color:#E8A020;line-height:0.6;margin-bottom:16px;display:block;}
-.promise-text{font-family:'Cormorant Garamond',Georgia,serif;font-size:22px;font-weight:600;color:#0F2744;line-height:1.45;margin-bottom:12px;font-style:italic;}
-.promise-sub{font-size:12px;color:#8A99AD;line-height:1.7;}
-.promise-right{background:#0F2744;border-radius:12px;padding:28px;}
-.promise-item{padding:14px 0;border-bottom:0.5px solid rgba(255,255,255,0.07);display:flex;align-items:flex-start;gap:12px;}
-.promise-item:last-child{border-bottom:none;padding-bottom:0;}
-.promise-item:first-child{padding-top:0;}
-.pi-dot{width:6px;height:6px;border-radius:50%;background:#E8A020;flex-shrink:0;margin-top:6px;}
-.pi-text{font-size:12px;color:rgba(255,255,255,0.6);line-height:1.6;}
-.pi-text strong{color:#fff;font-weight:600;display:block;margin-bottom:2px;font-size:13px;}
+    /* ── COLETA SELETIVA — cores reais ── */
+    .cs { border-radius: var(--rlg); overflow: hidden; }
+    .cs__hd { background: var(--ink); padding: var(--s6) var(--s7); border-bottom: 1px solid rgba(255,255,255,.07); display: flex; justify-content: space-between; align-items: flex-start; }
+    @media(max-width:640px) { .cs__hd { padding: var(--s5) var(--s5); } }
+    .cs__nbr { display: inline-flex; align-items: center; gap: 6px; background: rgba(240,173,0,.1); border: 1px solid rgba(240,173,0,.22); color: var(--amber); font-size: .69rem; letter-spacing: .09em; text-transform: uppercase; padding: 4px 10px; border-radius: 100px; margin-bottom: var(--s3); }
+    .cs__ti { font-family: var(--fd); font-weight: 700; font-size: 1.5rem; color: #fff; }
+    .cs__su { font-size: .8rem; color: rgba(255,255,255,.42); margin-top: 3px; }
+    .cs__g { display: grid; grid-template-columns: repeat(5,1fr); gap: 1px; background: rgba(0,0,0,.2); }
+    @media(max-width:640px) { .cs__g { grid-template-columns: repeat(3,1fr); } }
+    .cs__it { display: flex; flex-direction: column; align-items: center; justify-content: center; padding: var(--s6) var(--s4); text-align: center; transition: filter var(--tf), transform var(--tn); cursor: default; min-height: 180px; }
+    .cs__it:hover { filter: brightness(1.1); transform: translateY(-2px); }
+    
+    .cs__it--az { background: #1565C0; }
+    .cs__it--vd { background: #2E7D32; }
+    .cs__it--am { background: #E65100; }
+    .cs__it--vm { background: #B71C1C; }
+    .cs__it--rx { background: #4A148C; }
+    .cs__ico { width: 64px; height: 64px; margin-bottom: var(--s3); display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,.13); border-radius: 14px; padding: 8px; box-shadow: inset 0 1px 0 rgba(255,255,255,.18), 0 2px 8px rgba(0,0,0,.18); }
+    .cs__ico svg { width: 100%; height: 100%; display: block; }
+    .cs__cat { font-size: .75rem; color: rgba(255,255,255,.75); text-transform: uppercase; letter-spacing: .07em; margin-bottom: 3px; }
+    .cs__col { font-family: var(--fd); font-weight: 700; font-size: .95rem; color: #fff; letter-spacing: .04em; }
+    .cs__badge { font-size: .72rem; color: rgba(255,255,255,.5); letter-spacing: .05em; margin-top: 4px; }
+    .cs__it { gap: var(--s2); }
+    .cs__ft { background: var(--ink); padding: var(--s5) var(--s7); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--s4); }
+    .cs__inf { font-size: .875rem; color: rgba(255,255,255,.45); }
 
-/* CTA */
-.cta-section{background:#E8A020;padding:40px 44px;display:flex;align-items:center;justify-content:space-between;gap:24px;position:relative;overflow:hidden;}
-.cta-bg-jd{position:absolute;right:-16px;top:-24px;font-family:'Outfit',sans-serif;font-size:160px;font-weight:800;color:rgba(15,39,68,0.07);line-height:1;pointer-events:none;user-select:none;letter-spacing:-8px;}
-.cta-left h3{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:700;color:#0F2744;margin-bottom:4px;line-height:1.1;}
-.cta-left p{font-size:12px;color:rgba(15,39,68,0.6);}
-.cta-btn{background:#0F2744;color:#fff;font-family:'Outfit',sans-serif;font-size:13px;font-weight:700;letter-spacing:0.5px;padding:14px 28px;border-radius:8px;text-decoration:none;display:inline-flex;align-items:center;gap:9px;white-space:nowrap;flex-shrink:0;position:relative;z-index:1;}
+    /* Tabela comparativa */
+    .comp { margin-top: var(--s9); }
+    .comp__head { margin-bottom: var(--s6); }
+    .comp__lbl { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--amber-l); }
+    .comp__title { font-family: var(--fd); font-weight: 800; font-size: 1.5rem; color: #fff; margin-top: var(--s2); }
+    .comp-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .comp-table { width: 100%; border-collapse: collapse; min-width: 480px; }
+    .comp-table th { padding: 12px 20px; font-family: var(--fb); font-size: .8rem; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; text-align: left; background: var(--ink-mid); color: rgba(255,255,255,.55); }
+    .comp-table th:first-child { width: 40%; }
+    .comp-table th.th--prem { color: var(--amber-l); }
+    .comp-table th.th--econ { color: rgba(255,255,255,.7); }
+    .comp-table td { padding: 11px 20px; font-size: .9rem; border-bottom: 1px solid rgba(255,255,255,.06); color: rgba(255,255,255,.78); vertical-align: middle; }
+    .comp-table td:first-child { color: rgba(255,255,255,.45); font-size: .8rem; }
+    .comp-table tr:last-child td { border-bottom: none; }
+    .comp-table .hi { color: var(--amber-l); font-weight: 500; }
 
-/* FOOTER */
-.folder-footer{background:#071A2E;padding:18px 44px;display:flex;align-items:center;justify-content:space-between;}
-.footer-logo{display:flex;align-items:center;gap:10px;}
-.footer-mark{width:28px;height:28px;border-radius:5px;background:#E8A020;display:flex;align-items:center;justify-content:center;}
-.footer-name{font-family:'Outfit',sans-serif;font-size:13px;font-weight:800;color:#fff;}
-.footer-name .j{color:#E8A020;}
-.footer-info{font-size:10px;color:rgba(255,255,255,0.25);letter-spacing:0.5px;}
-</style>
+    /* ── REASONS ── */
+    .rg { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-bottom: var(--s8); }
+    @media(max-width:768px) { .rg { grid-template-columns: 1fr; } }
+    .rc { padding: var(--s7) var(--s6); background: var(--surface); border: 1px solid var(--border); border-left: 3px solid transparent; border-radius: var(--rlg); transition: box-shadow var(--tn), transform var(--tn), border-color var(--tn); }
+    .rc:hover { border-left-color: var(--amber-d); box-shadow: 0 10px 36px rgba(10,22,40,.09); transform: translateY(-3px); }
+    .rc:hover .rc__ico { background: rgba(240,173,0,.18); transition: background var(--tn); }
+    .rc__ico { width: 52px; height: 52px; background: rgba(240,173,0,.1); border-radius: var(--rlg); display: flex; align-items: center; justify-content: center; margin-bottom: var(--s5); }
+    .rc__t { font-family: var(--fd); font-weight: 700; font-size: 1.3rem; color: var(--txt); margin-bottom: var(--s3); }
+    .rc__p { font-size: .9375rem; color: var(--muted); line-height: 1.65; }
+
+    /* ── TRUST BLOCK ── */
+    .trust { background: var(--ink); border-radius: var(--rlg); padding: var(--s8); display: grid; grid-template-columns: 1fr 1fr; gap: var(--s8); align-items: start; }
+    @media(max-width:768px) { .trust { grid-template-columns: 1fr; padding: var(--s6); gap: var(--s6); } }
+    .trust__h { font-family: var(--fd); font-weight: 800; font-size: 1.75rem; color: #fff; line-height: 1.15; margin-bottom: var(--s6); }
+    .til { display: flex; flex-direction: column; gap: var(--s5); }
+    @media(max-width:768px) { .til { gap: var(--s4); } }
+    .ti { display: flex; gap: var(--s4); align-items: flex-start; }
+    .ti__ic { width: 44px; height: 44px; min-width: 44px; background: rgba(240,173,0,.08); border: 1px solid rgba(240,173,0,.18); border-radius: var(--rsm); display: flex; align-items: center; justify-content: center; }
+    .ti__l { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.38); margin-bottom: 4px; }
+    .ti__v { font-size: .9375rem; font-weight: 500; color: #fff; line-height: 1.4; }
+    .trust__r { display: flex; flex-direction: column; gap: var(--s6); }
+    .tq { padding: var(--s5) var(--s6); background: rgba(255,255,255,.04); border-left: 3px solid var(--amber); border-radius: 0 var(--rmd) var(--rmd) 0; }
+    .tq__label { font-size: .7rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--amber-d); margin-bottom: var(--s3); }
+    .tq p { font-size: .9375rem; line-height: 1.72; color: rgba(255,255,255,.7); }
+
+    /* ── FAQ ── */
+    .faq-list { display: flex; flex-direction: column; gap: var(--s2); margin-top: var(--s8); }
+    .faq-item { background: var(--surface); border: 1px solid var(--border); border-radius: var(--rlg); overflow: hidden; }
+    .faq-q { width: 100%; display: flex; align-items: center; justify-content: space-between; padding: var(--s5) var(--s6); background: none; border: none; cursor: pointer; font-family: var(--fb); font-size: 1rem; font-weight: 500; color: var(--txt); text-align: left; gap: var(--s5); transition: color var(--tf); }
+    .faq-q:hover { color: var(--ink); }
+    .faq-q:focus-visible { outline: 2px solid var(--amber); outline-offset: -2px; }
+    .faq-icon { width: 24px; height: 24px; background: var(--bg); border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: background var(--tn), transform var(--tn); }
+    .faq-item.open .faq-icon { background: var(--ink); transform: rotate(45deg); }
+    .faq-icon svg { width: 12px; height: 12px; }
+    .faq-icon svg line { stroke: var(--ink-muted); stroke-width: 2; stroke-linecap: round; transition: stroke var(--tn); }
+    .faq-item.open .faq-icon svg line { stroke: #fff; }
+    .faq-a-wrap { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .3s ease; }
+    .faq-item.open .faq-a-wrap { grid-template-rows: 1fr; }
+    .faq-a-inner { overflow: hidden; }
+    .faq-a { padding: 0 var(--s6) var(--s5); font-size: .9375rem; color: var(--muted); line-height: 1.7; border-top: 1px solid var(--border-s); padding-top: var(--s4); }
+
+    /* ── TESTIMONIALS ── */
+    .tg { display: grid; grid-template-columns: repeat(3,1fr); gap: var(--s5); margin-top: var(--s8); }
+    @media(max-width:900px) { .tg { grid-template-columns: 1fr; } }
+    .tc { padding: var(--s6); background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--rlg); position: relative; overflow: hidden; }
+    .tc::before { content: '\201C'; position: absolute; top: -14px; right: 18px; font-family: Georgia,'Times New Roman',serif; font-size: 8.5rem; line-height: 1; color: var(--amber); opacity: .09; pointer-events: none; user-select: none; z-index: 0; }
+    .tc > * { position: relative; z-index: 1; }
+    .tc__st { display: flex; gap: 3px; margin-bottom: var(--s4); }
+    .tc__s { color: var(--amber); font-size: 1rem; }
+    .tc__sh { position: relative; display: inline-block; color: rgba(255,255,255,.2); font-size: 1rem; }
+    .tc__sh::before { content: '★'; position: absolute; left: 0; top: 0; width: 50%; overflow: hidden; color: var(--amber); }
+    .tc__q { font-size: .9375rem; line-height: 1.7; color: rgba(255,255,255,.75); font-style: italic; margin-bottom: var(--s5); }
+    .tc__div { height: 1px; background: rgba(255,255,255,.09); margin-bottom: var(--s4); }
+    .tc__m { display: flex; align-items: center; gap: var(--s3); }
+    .tc__av { width: 42px; height: 42px; border-radius: 50%; background: rgba(240,173,0,.15); border: 1px solid rgba(240,173,0,.28); display: flex; align-items: center; justify-content: center; font-family: var(--fd); font-weight: 700; font-size: 1rem; color: var(--amber-l); flex-shrink: 0; }
+    .tc__nm { font-size: .875rem; font-weight: 500; color: #fff; }
+    .tc__rl { font-size: .78rem; color: rgba(255,255,255,.42); }
+
+    /* ── CTA FINAL ── */
+    .ctaf { background: var(--amber); padding: var(--s11) 0; text-align: center; position: relative; overflow: hidden; }
+    .ctaf::before {
+      content: '';
+      position: absolute; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.82' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      opacity: .045; mix-blend-mode: multiply;
+      pointer-events: none; z-index: 0;
+    }
+    .ctaf__deco { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+    .ctaf > .wrap { position: relative; z-index: 1; }
+    @media(max-width:768px) { .ctaf { padding: var(--s8) 0; } }
+    .ctaf__e { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(10,22,40,.52); margin-bottom: var(--s5); }
+    .ctaf__h { font-family: var(--fd); font-weight: 900; font-size: clamp(2.5rem,5vw,4rem); line-height: 1.02; color: var(--ink); margin-bottom: var(--s4); }
+    .ctaf__p { font-size: 1rem; color: rgba(10,22,40,.62); margin-bottom: var(--s7); }
+    .btn-lg { display: inline-flex; align-items: center; gap: var(--s3); background: var(--green); color: #fff; border-radius: var(--rmd); font-family: var(--fb); font-size: 1.1rem; font-weight: 500; padding: 18px 40px; min-height: 60px; text-decoration: none; border: none; transition: background var(--tn), transform var(--tn), box-shadow var(--tn); }
+    .btn-lg:hover { background: var(--green-d); transform: translateY(-2px); box-shadow: 0 10px 32px rgba(34,197,94,.3); }
+    @media(prefers-reduced-motion:reduce) { .btn-lg:hover { transform: none; box-shadow: none; } }
+
+    /* ── FOOTER ── */
+    .ftr { background: var(--ink); border-top: 1px solid rgba(255,255,255,.06); padding: var(--s9) 0 var(--s7); }
+    @media(max-width:768px) { .ftr { padding: var(--s7) 0 var(--s6); } }
+    .ftr__g { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: var(--s8); margin-bottom: var(--s8); }
+    @media(max-width:768px) { .ftr__g { grid-template-columns: 1fr; gap: var(--s6); } }
+    .ftr__brand p { font-size: .875rem; color: rgba(255,255,255,.42); line-height: 1.65; margin-top: var(--s4); max-width: 300px; }
+    .ftr__h { font-size: .78rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: rgba(255,255,255,.5); margin-bottom: var(--s4); }
+    .ftr__lk { display: flex; flex-direction: column; gap: var(--s3); }
+    .ftr__lk a { font-size: .875rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color var(--tf); }
+    .ftr__lk a:hover { color: #fff; }
+    .ftr__ct { display: flex; flex-direction: column; gap: var(--s3); }
+    .ftr__ct span, .ftr__ct a { font-size: .875rem; color: rgba(255,255,255,.55); text-decoration: none; transition: color var(--tf); }
+    .ftr__ct a:hover { color: #fff; }
+    .ftr__cov { margin-top: var(--s4); padding-top: var(--s4); border-top: 1px solid rgba(255,255,255,.07); }
+    .ftr__cov-lbl { font-size: .7rem; text-transform: uppercase; letter-spacing: .09em; color: rgba(255,255,255,.3); margin-bottom: var(--s2); }
+    .ftr__cov-txt { font-size: .8rem; color: rgba(255,255,255,.45); line-height: 1.5; }
+    .ftr__bot { padding-top: var(--s6); border-top: 1px solid rgba(255,255,255,.07); display: flex; align-items: center; flex-wrap: wrap; gap: var(--s2) var(--s5); font-size: .8rem; color: rgba(255,255,255,.28); }
+    .ftr__bot strong { color: rgba(255,255,255,.52); font-weight: 500; }
+    .ftr__sep { color: rgba(255,255,255,.15); }
+
+    /* ── WA FLOAT ── */
+    .waf { position: fixed; bottom: 28px; right: 28px; z-index: 999; display: flex; align-items: center; gap: var(--s2); text-decoration: none; }
+    .waf__btn { width: 62px; height: 62px; background: var(--green); border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(34,197,94,.4); color: #fff; transition: transform var(--tn), box-shadow var(--tn); flex-shrink: 0; }
+    .waf:hover .waf__btn { transform: scale(1.08); box-shadow: 0 8px 32px rgba(34,197,94,.55); }
+    .waf__label { background: var(--ink); color: #fff; font-family: var(--fb); font-size: .82rem; font-weight: 500; padding: 7px 14px; border-radius: var(--rmd); opacity: 0; transform: translateX(8px); transition: opacity var(--tn), transform var(--tn); white-space: nowrap; order: -1; }
+    .waf:hover .waf__label { opacity: 1; transform: translateX(0); }
+    .waf:focus-visible .waf__btn { outline: 3px solid var(--green); outline-offset: 4px; }
+    @media(prefers-reduced-motion:reduce) { .waf:hover .waf__btn { transform: none; } .waf__label { transition: none; } }
+
+    /* ── SECTION DIVIDERS ── */
+    .sec-div { display: block; line-height: 0; overflow: hidden; margin: -1px 0; }
+    .sec-div svg { display: block; width: 100%; height: 52px; }
+
+    /* ── SCROLL REVEAL ── */
+    .rv { opacity: 0; transform: translateY(22px); transition: opacity var(--tr), transform var(--tr); }
+    .rv.in { opacity: 1; transform: none; }
+    @media(prefers-reduced-motion:reduce) { .rv { opacity: 1; transform: none; } }
+
+    /* ── HERO SPLIT (foto produto) ── */
+    .hero__cnt { position: relative; z-index: 2; padding: var(--s10) 0; }
+    .hero__split { display: grid; grid-template-columns: 1fr 420px; gap: var(--s8); align-items: center; }
+    .hero__img-wrap {
+      position: relative; border-radius: 20px; overflow: hidden;
+      box-shadow: 0 32px 80px rgba(0,0,0,.55);
+      border: 1px solid rgba(255,255,255,.08);
+    }
+    .hero__img-wrap img { display: block; width: 100%; height: 420px; object-fit: cover; object-position: center; filter: brightness(.92) saturate(.9); }
+    .hero__img-badge {
+      position: absolute; bottom: 16px; left: 16px; right: 16px;
+      background: rgba(10,22,40,.82); backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,.1); border-radius: var(--rlg);
+      padding: 12px 16px; display: flex; align-items: center; gap: 10px;
+    }
+    .hero__img-badge-dot { width: 8px; height: 8px; background: var(--green); border-radius: 50%; flex-shrink: 0; box-shadow: 0 0 0 3px rgba(34,197,94,.2); }
+    .hero__img-badge-txt { font-size: .8rem; color: rgba(255,255,255,.8); line-height: 1.3; }
+    .hero__img-badge-txt strong { color: #fff; display: block; font-size: .875rem; }
+    @media(max-width:960px) { .hero__split { grid-template-columns: 1fr; } .hero__img-wrap { display: none; } }
+
+    /* ── FLOW DIAGRAM — Como Funciona ── */
+    .flow { margin-top: var(--s8); }
+    .flow__svg-wrap { width: 100%; overflow: hidden; border-radius: var(--rlg); background: var(--ink); border: 1px solid rgba(255,255,255,.06); padding: var(--s6) var(--s5); }
+    @media(max-width:640px) { .flow__svg-wrap { padding: var(--s4) var(--s3); } }
+
+    /* ── MAPA DE COBERTURA ── */
+    .map-sec { margin-top: var(--s9); }
+    .map-sec__hd { display: flex; align-items: flex-end; justify-content: space-between; flex-wrap: wrap; gap: var(--s4); margin-bottom: var(--s6); }
+    .map-sec__lbl { font-size: .75rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--amber-d); margin-bottom: var(--s3); }
+    .map-sec__title { font-family: var(--fd); font-weight: 800; font-size: 1.5rem; color: var(--txt); }
+    .map-sec__note { font-size: .85rem; color: var(--muted); max-width: 280px; text-align: right; line-height: 1.5; }
+    @media(max-width:640px) { .map-sec__note { text-align: left; } }
+    .map-wrap { border-radius: var(--rlg); overflow: hidden; border: 1px solid var(--border); background: #e8e4dc; }
+    .map-legend { display: flex; flex-wrap: wrap; gap: var(--s3) var(--s5); margin-top: var(--s4); }
+    .map-leg { display: flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); }
+    .map-leg__dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+
+    /* ── STEP VISUAL (mini ilustração em cada passo) ── */
+    .step__visual { border-radius: var(--rmd) var(--rmd) 0 0; overflow: hidden; background: var(--ink); border-bottom: 1px solid rgba(0,0,0,.06); }
+    .step__visual svg { display: block; width: 100%; }
+    .step__body { padding: var(--s5) var(--s6) var(--s6); }
+    .step__n { width: 42px; height: 42px; background: var(--amber); color: var(--ink); border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: var(--fd); font-weight: 900; font-size: 1.1rem; margin-bottom: var(--s4); }
+
+    /* ── PRODUCT SHOWCASE STRIP ── */
+    .prod-hl { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s7); margin-bottom: var(--s8); padding: var(--s7) var(--s8); background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); border-radius: var(--rlg); align-items: start; }
+    @media(max-width:860px) { .prod-hl { grid-template-columns: 1fr; gap: var(--s5); padding: var(--s6); } }
+    .prod-hl > div { min-width: 0; } /* Fix B2: previne grid blowout */
+    .prod-hl__lbl { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: var(--amber-l); margin-bottom: var(--s3); }
+    .prod-hl__title { font-family: var(--fd); font-weight: 900; font-size: clamp(1.6rem,2.5vw,2.2rem); color: #fff; line-height: 1.05; margin-bottom: var(--s3); }
+    .prod-hl__sub { font-size: .875rem; color: rgba(255,255,255,.45); line-height: 1.6; margin-bottom: var(--s5); overflow-wrap: break-word; }
+    .prod-hl__pills { display: flex; flex-direction: column; gap: var(--s3); }
+    .prod-pill { display: flex; align-items: flex-start; gap: var(--s3); padding: 12px 18px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--rmd); transition: background var(--tf); overflow: hidden; } /* Fix B1 context */
+    .prod-pill:hover { background: rgba(255,255,255,.08); }
+    .prod-pill__dot { width: 9px; height: 9px; border-radius: 50%; flex-shrink: 0; margin-top: 5px; } /* margin-top aligns dot with text baseline */
+    .prod-pill__dot--amb { background: var(--amber); box-shadow: 0 0 6px rgba(240,173,0,.5); }
+    .prod-pill__dot--grn { background: var(--green); box-shadow: 0 0 6px rgba(34,197,94,.4); }
+    .prod-pill__dot--blu { background: #60A5FA; box-shadow: 0 0 6px rgba(96,165,250,.4); }
+    .prod-pill__left { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; } /* Fix B1: min-width: 0 allows shrink */
+    .prod-pill__name { font-family: var(--fd); font-weight: 700; font-size: 1rem; color: #fff; letter-spacing: .02em; }
+    .prod-pill__vol { font-size: .78rem; color: rgba(255,255,255,.4); white-space: normal; overflow-wrap: break-word; word-break: break-word; line-height: 1.4; } /* Fix C1: permite quebra */
+
+    /* Barra de tamanhos — coluna direita */
+    .prod-sizes-wrap { display: flex; flex-direction: column; gap: var(--s3); min-width: 0; }
+    .prod-sizes-ttl { font-size: .72rem; font-weight: 500; letter-spacing: .12em; text-transform: uppercase; color: rgba(255,255,255,.35); margin-bottom: var(--s2); }
+    /* Labels de volume acima das barras */
+    .prod-sizes-vals { display: flex; gap: 6px; }
+    .prod-sizes-vals span { flex: 1; min-width: 0; text-align: center; font-family: var(--fd); font-weight: 700; font-size: .82rem; color: rgba(255,255,255,.75); letter-spacing: .02em; line-height: 1; }
+    /* Barras: blocos coloridos puros, sem texto interno */
+    .prod-sizes-chart { display: flex; align-items: flex-end; gap: 6px; height: 72px; width: 100%; border-bottom: 1px solid rgba(255,255,255,.12); padding-bottom: 0; }
+    .psc { flex: 1; min-width: 0; border-radius: 4px 4px 0 0; transition: opacity .15s ease; }
+    .psc:hover { opacity: .8; }
+    /* Labels de uso abaixo das barras: removidos por decisão de design */
+
+    /* ── COV PANEL ── */
+    .cov-panel { margin-top: var(--s9); }
+    .cov-hl { background: var(--ink); border-radius: var(--rlg) var(--rlg) 0 0; padding: var(--s7) var(--s8); display: flex; flex-direction: column; gap: var(--s4); border: 1px solid rgba(255,255,255,.07); border-bottom: none; }
+    @media(max-width:768px) { .cov-hl { padding: var(--s6); } }
+    .cov-hl__badge { display: inline-flex; align-items: center; gap: var(--s2); background: rgba(240,173,0,.12); border: 1px solid rgba(240,173,0,.3); color: var(--amber-l); font-size: .72rem; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; padding: 4px 14px; border-radius: 100px; width: fit-content; }
+    .cov-hl__badge::before { content:''; width:6px; height:6px; background:var(--amber); border-radius:50%; flex-shrink:0; }
+    .cov-hl__title { font-family: var(--fd); font-weight: 900; font-size: clamp(1.8rem,3.5vw,2.6rem); color: #fff; line-height: 1.02; }
+    .cov-hl__title em { font-style: normal; color: var(--amber); }
+    .cov-hl__sub { font-size: .9rem; color: rgba(255,255,255,.5); max-width: 520px; line-height: 1.6; }
+
+    /* ── COVERAGE TIERS (substitui o mapa SVG) ── */
+    .cov-tiers { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.07); border-top: none; }
+    @media(max-width:768px) { .cov-tiers { grid-template-columns: 1fr; } }
+
+    .cov-tier { background: var(--ink); padding: var(--s8) var(--s6); display: flex; flex-direction: column; gap: var(--s4); border-left: 3px solid transparent; transition: border-color var(--tn); }
+    .cov-tier--1 { border-left-color: var(--amber); }
+    .cov-tier--2 { border-left-color: rgba(240,173,0,.32); }
+    .cov-tier--3 { border-left-color: rgba(240,173,0,.1); }
+    @media(max-width:768px) { .cov-tier { padding: var(--s6); border-left: none; border-top: 3px solid transparent; } .cov-tier--1 { border-top-color: var(--amber); } .cov-tier--2 { border-top-color: rgba(240,173,0,.32); } .cov-tier--3 { border-top-color: rgba(240,173,0,.1); } }
+
+    /* Indicador de sinal (WiFi-style) */
+    .cov-tier__signal { display: flex; align-items: flex-end; gap: 4px; height: 22px; margin-bottom: 2px; }
+    .cov-tier__sig-bar { width: 6px; border-radius: 2px 2px 0 0; background: rgba(255,255,255,.1); transition: background var(--tn); }
+    .cov-tier__sig-bar--on { background: var(--amber); }
+    .cov-tier--2 .cov-tier__sig-bar--on { background: rgba(240,173,0,.7); }
+    .cov-tier--3 .cov-tier__sig-bar--on { background: rgba(240,173,0,.45); }
+
+    /* Status label */
+    .cov-tier__status { font-size: .68rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .cov-tier--1 .cov-tier__status { color: var(--amber-l); }
+    .cov-tier--2 .cov-tier__status { color: rgba(255,255,255,.45); }
+    .cov-tier--3 .cov-tier__status { color: rgba(255,255,255,.25); }
+
+    /* Nome da zona */
+    .cov-tier__name { font-family: var(--fd); font-weight: 900; font-size: 2rem; line-height: 1; letter-spacing: -.01em; }
+    .cov-tier--1 .cov-tier__name { color: #fff; }
+    .cov-tier--2 .cov-tier__name { color: rgba(255,255,255,.65); }
+    .cov-tier--3 .cov-tier__name { color: rgba(255,255,255,.38); }
+
+    /* Sub-título geográfico */
+    .cov-tier__geo { font-size: .78rem; color: rgba(255,255,255,.28); letter-spacing: .04em; margin-top: -8px; }
+
+    /* Contador */
+    .cov-tier__count { font-family: var(--fd); font-weight: 700; font-size: 1rem; letter-spacing: .02em; }
+    .cov-tier--1 .cov-tier__count { color: var(--amber); }
+    .cov-tier--2 .cov-tier__count { color: rgba(240,173,0,.55); }
+    .cov-tier--3 .cov-tier__count { color: rgba(240,173,0,.3); }
+
+    /* Badges de bairro */
+    .cov-tier__hoods { display: flex; flex-wrap: wrap; gap: 6px; flex: 1; align-content: flex-start; }
+    .cov-tier__hood { font-size: .75rem; padding: 4px 11px; border-radius: 100px; white-space: nowrap; transition: background var(--tf); }
+    .cov-tier--1 .cov-tier__hood { color: rgba(255,255,255,.8); background: rgba(240,173,0,.1); border: 1px solid rgba(240,173,0,.22); }
+    .cov-tier--1 .cov-tier__hood:hover { background: rgba(240,173,0,.18); }
+    .cov-tier--2 .cov-tier__hood { color: rgba(255,255,255,.48); background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.09); }
+    .cov-tier--3 .cov-tier__hood { color: rgba(255,255,255,.3); background: rgba(255,255,255,.02); border: 1px solid rgba(255,255,255,.06); }
+
+    /* CTA do tier 3 */
+    .cov-tier__cta { display: inline-flex; align-items: center; justify-content: center; gap: var(--s2); background: var(--green); color: #fff; border-radius: var(--rmd); font-family: var(--fb); font-size: .875rem; font-weight: 500; padding: 12px 20px; min-height: 46px; text-decoration: none; transition: background var(--tn); margin-top: var(--s2); }
+    .cov-tier__cta:hover { background: var(--green-d); }
+
+    /* Interior strip */
+    .cov-interior { background: rgba(255,255,255,.025); border: 1px solid rgba(255,255,255,.07); border-top: none; border-radius: 0 0 var(--rlg) var(--rlg); padding: var(--s5) var(--s8); display: flex; align-items: center; gap: var(--s6); flex-wrap: wrap; }
+    @media(max-width:768px) { .cov-interior { padding: var(--s5); gap: var(--s4); } }
+    .cov-int__lbl { font-size: .72rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.35); white-space: nowrap; flex-shrink: 0; }
+    .cov-int__cities { display: flex; flex-wrap: wrap; gap: var(--s2); }
+    .cov-int__city { font-size: .78rem; color: rgba(255,255,255,.45); background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.07); padding: 3px 12px; border-radius: 100px; white-space: nowrap; }
+    .btn-cov-wa { display: inline-flex; align-items: center; justify-content: center; gap: var(--s2); background: var(--green); color: #fff; border-radius: var(--rmd); font-family: var(--fb); font-size: .9rem; font-weight: 500; padding: 12px 22px; min-height: 48px; text-decoration: none; transition: background var(--tn); }
+    .btn-cov-wa:hover { background: var(--green-d); }
+    /* Old cov-grid (legado) */
+    .cov-grid { display: none; }
+  </style>
 </head>
 <body>
-<div class="folder">
 
-  <!-- HERO -->
-  <div class="hero">
-    <div class="hero-monogram">JD</div>
-    <div class="hero-amber-line"></div>
-    <div class="hero-amber-dot"></div>
-    <div class="logo-row">
-      <div class="logo-mark">
-        <svg width="22" height="22" viewBox="0 0 26 26" fill="none">
-          <rect x="4" y="3" width="6" height="20" rx="2" fill="#0F2744"/>
-          <rect x="4" y="15" width="9" height="4" rx="1.5" fill="#fff"/>
-          <path d="M14 3 Q24 3 24 13 Q24 23 14 23 L14 17 Q20 17 20 13 Q20 9 14 9 Z" fill="#0F2744"/>
+<!-- WA FLOAT -->
+<a href="https://wa.me/5521974566127" class="waf" aria-label="Falar no WhatsApp — Pedir cotação" target="_blank" rel="noopener noreferrer">
+  <span class="waf__label" aria-hidden="true">Pedir cotação</span>
+  <div class="waf__btn">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+  </div>
+</a>
+
+<!-- NAV OVERLAY MOBILE -->
+<div class="nav-ov" id="nav-ov" aria-label="Menu mobile" role="dialog" aria-modal="true" hidden>
+  <div class="nav-ov__links">
+    <a href="#como-funciona" class="nav-ov__link">Como funciona</a>
+    <a href="#produtos" class="nav-ov__link">Produtos</a>
+    <a href="#por-que" class="nav-ov__link">Por que JDuque</a>
+    <a href="#faq" class="nav-ov__link">Dúvidas</a>
+    <a href="#contato" class="nav-ov__link">Contato</a>
+  </div>
+  <div class="nav-ov__meta">
+    <div style="color:rgba(255,255,255,.6);margin-bottom:4px">(21) 97456-6127</div>
+    <div>Rio de Janeiro, RJ</div>
+  </div>
+  <div class="nav-ov__cta">
+    <a href="https://wa.me/5521974566127" class="btn-wa" target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+      Solicitar cotação
+    </a>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="wrap">
+    <div class="hdr__row">
+      <a href="#" class="logo" aria-label="JDuque Descartáveis — início">
+        <div class="logo__m" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 26 26" fill="none">
+            <path d="M8 4h10l2 3H6L8 4z" fill="rgba(10,22,40,.35)"/>
+            <rect x="5" y="7" width="16" height="15" rx="2" fill="rgba(10,22,40,.25)"/>
+            <path d="M11 4.5C11 3.67 11.67 3 12.5 3h1C14.33 3 15 3.67 15 4.5" stroke="rgba(10,22,40,.6)" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="7" y="19" font-family="sans-serif" font-weight="900" font-size="9" fill="rgba(10,22,40,.85)" letter-spacing="-0.5">JD</text>
+          </svg>
+        </div>
+        <div>
+          <span class="logo__n">JDuque</span>
+          <span class="logo__s">Descartáveis · Rio de Janeiro</span>
+        </div>
+      </a>
+      <nav class="nav" aria-label="Navegação principal">
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#produtos">Produtos</a>
+        <a href="#por-que">Por que JDuque</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:16px">
+        <a href="https://wa.me/5521974566127" class="hbtn" target="_blank" rel="noopener noreferrer">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+          <span class="hbtn__txt">Pedir cotação</span>
+        </a>
+        <button class="hbg" id="hbg" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav-ov">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" aria-labelledby="hero-h1">
+  <svg class="hero__bg" viewBox="0 0 1440 780" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <defs>
+      <pattern id="grid" width="64" height="64" patternUnits="userSpaceOnUse"><path d="M 64 0 L 0 0 0 64" fill="none" stroke="rgba(255,255,255,0.025)" stroke-width=".5"/></pattern>
+      <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#0A1628" stop-opacity="0"/><stop offset="60%" stop-color="#0A1628" stop-opacity=".75"/><stop offset="100%" stop-color="#0A1628" stop-opacity="1"/></linearGradient>
+    </defs>
+    <rect width="1440" height="780" fill="#0A1628"/>
+    <rect width="1440" height="780" fill="url(#grid)"/>
+    <rect x="0" y="480" width="55" height="300" fill="rgba(255,255,255,0.008)"/><rect x="60" y="420" width="40" height="360" fill="rgba(255,255,255,0.007)"/><rect x="105" y="460" width="70" height="320" fill="rgba(255,255,255,0.009)"/><rect x="180" y="390" width="35" height="390" fill="rgba(255,255,255,0.007)"/><rect x="220" y="440" width="55" height="340" fill="rgba(255,255,255,0.008)"/><rect x="280" y="370" width="90" height="410" fill="rgba(255,255,255,0.01)"/><rect x="375" y="410" width="45" height="370" fill="rgba(255,255,255,0.008)"/><rect x="425" y="350" width="60" height="430" fill="rgba(255,255,255,0.009)"/><rect x="490" y="430" width="80" height="350" fill="rgba(255,255,255,0.007)"/><rect x="575" y="360" width="50" height="420" fill="rgba(255,255,255,0.009)"/><rect x="630" y="400" width="40" height="380" fill="rgba(255,255,255,0.007)"/><rect x="675" y="340" width="75" height="440" fill="rgba(255,255,255,0.01)"/><rect x="755" y="390" width="55" height="390" fill="rgba(255,255,255,0.008)"/><rect x="815" y="450" width="65" height="330" fill="rgba(255,255,255,0.007)"/><rect x="885" y="370" width="45" height="410" fill="rgba(255,255,255,0.009)"/><rect x="935" y="420" width="80" height="360" fill="rgba(255,255,255,0.007)"/><rect x="1020" y="360" width="60" height="420" fill="rgba(255,255,255,0.009)"/><rect x="1085" y="410" width="50" height="370" fill="rgba(255,255,255,0.008)"/><rect x="1140" y="380" width="90" height="400" fill="rgba(255,255,255,0.01)"/><rect x="1235" y="420" width="45" height="360" fill="rgba(255,255,255,0.007)"/><rect x="1285" y="350" width="70" height="430" fill="rgba(255,255,255,0.009)"/><rect x="1360" y="400" width="80" height="380" fill="rgba(255,255,255,0.008)"/>
+    <rect x="20" y="520" width="90" height="260" fill="rgba(255,255,255,0.016)"/><rect x="115" y="480" width="60" height="300" fill="rgba(255,255,255,0.013)"/><rect x="180" y="500" width="110" height="280" fill="rgba(255,255,255,0.018)"/><rect x="300" y="460" width="70" height="320" fill="rgba(255,255,255,0.015)"/><rect x="375" y="510" width="90" height="270" fill="rgba(255,255,255,0.013)"/><rect x="470" y="470" width="60" height="310" fill="rgba(255,255,255,0.016)"/><rect x="535" y="500" width="100" height="280" fill="rgba(255,255,255,0.013)"/><rect x="640" y="450" width="80" height="330" fill="rgba(255,255,255,0.017)"/><rect x="725" y="490" width="70" height="290" fill="rgba(255,255,255,0.014)"/><rect x="800" y="520" width="110" height="260" fill="rgba(255,255,255,0.015)"/><rect x="915" y="475" width="65" height="305" fill="rgba(255,255,255,0.013)"/><rect x="985" y="510" width="90" height="270" fill="rgba(255,255,255,0.016)"/><rect x="1080" y="490" width="75" height="290" fill="rgba(255,255,255,0.014)"/><rect x="1160" y="460" width="100" height="320" fill="rgba(255,255,255,0.017)"/><rect x="1265" y="500" width="80" height="280" fill="rgba(255,255,255,0.013)"/><rect x="1350" y="480" width="90" height="300" fill="rgba(255,255,255,0.015)"/>
+    <rect x="0" y="570" width="70" height="210" fill="rgba(255,255,255,0.025)"/><rect x="75" y="540" width="50" height="240" fill="rgba(255,255,255,0.022)"/><rect x="130" y="560" width="130" height="220" fill="rgba(255,255,255,0.027)"/><rect x="265" y="520" width="60" height="260" fill="rgba(255,255,255,0.023)"/><rect x="330" y="555" width="100" height="225" fill="rgba(255,255,255,0.02)"/><rect x="435" y="535" width="80" height="245" fill="rgba(255,255,255,0.026)"/><rect x="520" y="560" width="140" height="220" fill="rgba(255,255,255,0.023)"/><rect x="665" y="530" width="70" height="250" fill="rgba(255,255,255,0.025)"/><rect x="740" y="555" width="120" height="225" fill="rgba(255,255,255,0.022)"/><rect x="865" y="540" width="80" height="240" fill="rgba(255,255,255,0.025)"/><rect x="950" y="565" width="130" height="215" fill="rgba(255,255,255,0.023)"/><rect x="1085" y="535" width="90" height="245" fill="rgba(255,255,255,0.025)"/><rect x="1180" y="555" width="110" height="225" fill="rgba(255,255,255,0.022)"/><rect x="1295" y="545" width="75" height="235" fill="rgba(255,255,255,0.023)"/><rect x="1375" y="570" width="65" height="210" fill="rgba(255,255,255,0.02)"/>
+    <rect x="285" y="530" width="8" height="6" fill="rgba(240,173,0,.38)" rx="1"/><rect x="285" y="544" width="8" height="6" fill="rgba(240,173,0,.26)" rx="1"/><rect x="299" y="530" width="8" height="6" fill="rgba(240,173,0,.3)" rx="1"/><rect x="666" y="540" width="10" height="7" fill="rgba(240,173,0,.38)" rx="1"/><rect x="680" y="540" width="10" height="7" fill="rgba(240,173,0,.26)" rx="1"/><rect x="666" y="554" width="10" height="7" fill="rgba(240,173,0,.22)" rx="1"/><rect x="951" y="574" width="12" height="8" fill="rgba(240,173,0,.34)" rx="1"/><rect x="968" y="574" width="12" height="8" fill="rgba(240,173,0,.22)" rx="1"/><rect x="951" y="589" width="12" height="8" fill="rgba(240,173,0,.28)" rx="1"/><rect x="1181" y="564" width="10" height="7" fill="rgba(240,173,0,.32)" rx="1"/><rect x="1196" y="564" width="10" height="7" fill="rgba(240,173,0,.2)" rx="1"/>
+    <rect width="1440" height="780" fill="url(#fade)"/>
+  </svg>
+  <div class="hero__cnt">
+    <div class="wrap">
+      <div class="hero__split">
+        <div>
+          <div class="kicker" aria-hidden="true">Fornecedor local · Rio de Janeiro</div>
+          <h1 class="h1" id="hero-h1">O fornecedor que<br>não te deixa<br><em>na mão.</em></h1>
+          <p class="hero__sub">Sacos de lixo e descartáveis com entrega programada para condomínios e empresas. Você define o dia — a gente garante o estoque.</p>
+          <div class="hero__acts">
+            <a href="https://wa.me/5521974566127?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20uma%20cotação" class="btn-wa" target="_blank" rel="noopener noreferrer">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+              Solicitar cotação no WhatsApp
+            </a>
+            <a href="#produtos" class="btn-gh">Ver linha de produtos</a>
+          </div>
+          <div class="badges" aria-label="Diferenciais">
+            <span class="badge"><span class="ck" aria-hidden="true">✓</span> Entrega programada</span>
+            <span class="badge"><span class="ck" aria-hidden="true">✓</span> Atendimento direto</span>
+            <span class="badge"><span class="ck" aria-hidden="true">✓</span> Linha premium e econômica</span>
+            <span class="badge"><span class="ck" aria-hidden="true">✓</span> Coleta seletiva NBR</span>
+          </div>
+        </div>
+        <!-- Ilustração — Cena de entrega Rio de Janeiro -->
+        <div class="hero__img-wrap" aria-hidden="true">
+          <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" style="display:block;width:100%;height:100%;">
+            <!-- DEFS -->
+            <defs>
+              <radialGradient id="heroBg2" cx="48%" cy="38%" r="70%">
+                <stop offset="0%" stop-color="#152540"/>
+                <stop offset="100%" stop-color="#0A1628"/>
+              </radialGradient>
+              <radialGradient id="ambHalo" cx="50%" cy="55%" r="50%">
+                <stop offset="0%" stop-color="rgba(240,173,0,.22)"/>
+                <stop offset="100%" stop-color="rgba(240,173,0,0)"/>
+              </radialGradient>
+              <linearGradient id="vanBody2" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e3558"/>
+                <stop offset="100%" stop-color="#0f1e34"/>
+              </linearGradient>
+              <linearGradient id="vanCab" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#162840"/>
+                <stop offset="100%" stop-color="#1a3050"/>
+              </linearGradient>
+              <linearGradient id="roadGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="rgba(240,173,0,.06)"/>
+                <stop offset="100%" stop-color="rgba(240,173,0,.01)"/>
+              </linearGradient>
+              <filter id="vanShadow2">
+                <feDropShadow dx="0" dy="10" stdDeviation="14" flood-color="rgba(0,0,0,.6)"/>
+              </filter>
+              <filter id="glow2">
+                <feGaussianBlur stdDeviation="5" result="blur"/>
+                <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+              </filter>
+              <filter id="softGlow">
+                <feGaussianBlur stdDeviation="12"/>
+              </filter>
+              <pattern id="heroGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+                <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,.025)" stroke-width=".5"/>
+              </pattern>
+            </defs>
+
+            <!-- Fundo -->
+            <rect width="420" height="420" fill="url(#heroBg2)"/>
+            <rect width="420" height="420" fill="url(#heroGrid)"/>
+
+            <!-- Cristo Redentor — silhueta sutil, topo -->
+            <g opacity=".055" transform="translate(178,8)">
+              <circle cx="32" cy="28" r="11" fill="#fff"/>
+              <rect x="27" y="38" width="10" height="62" rx="3" fill="#fff"/>
+              <rect x="0" y="44" width="64" height="8" rx="3" fill="#fff"/>
+              <rect x="24" y="98" width="16" height="18" rx="2" fill="#fff"/>
+            </g>
+
+            <!-- Halo âmbar central -->
+            <ellipse cx="210" cy="270" rx="130" ry="80" fill="url(#ambHalo)"/>
+            <!-- Glow atrás do veículo -->
+            <ellipse cx="210" cy="295" rx="100" ry="22" fill="rgba(240,173,0,.08)" filter="url(#softGlow)"/>
+
+            <!-- Silhueta da cidade / skyline -->
+            <g fill="rgba(255,255,255,.048)">
+              <rect x="0"   y="310" width="22" height="110"/>
+              <rect x="26"  y="285" width="16" height="135"/>
+              <rect x="46"  y="300" width="30" height="120"/>
+              <rect x="80"  y="270" width="18" height="150"/>
+              <rect x="102" y="295" width="25" height="125"/>
+              <rect x="132" y="260" width="20" height="160"/>
+              <rect x="156" y="280" width="14" height="140"/>
+              <rect x="174" y="250" width="28" height="170"/>
+              <rect x="206" y="265" width="18" height="155"/>
+              <rect x="228" y="240" width="32" height="180"/>
+              <rect x="264" y="272" width="22" height="148"/>
+              <rect x="290" y="285" width="18" height="135"/>
+              <rect x="312" y="255" width="28" height="165"/>
+              <rect x="344" y="278" width="20" height="142"/>
+              <rect x="368" y="265" width="24" height="155"/>
+              <rect x="396" y="305" width="24" height="115"/>
+            </g>
+            <!-- Janelas (lights) -->
+            <g fill="rgba(240,173,0,.35)">
+              <rect x="51" y="304" width="4" height="3" rx=".5"/>
+              <rect x="58" y="304" width="4" height="3" rx=".5"/>
+              <rect x="51" y="312" width="4" height="3" rx=".5"/>
+              <rect x="136" y="268" width="5" height="4" rx=".5"/>
+              <rect x="145" y="268" width="5" height="4" rx=".5"/>
+              <rect x="136" y="278" width="5" height="4" rx=".5"/>
+              <rect x="232" y="248" width="5" height="4" rx=".5"/>
+              <rect x="241" y="248" width="5" height="4" rx=".5"/>
+              <rect x="316" y="262" width="5" height="4" rx=".5"/>
+              <rect x="326" y="262" width="5" height="4" rx=".5"/>
+              <rect x="316" y="272" width="5" height="4" rx=".5"/>
+            </g>
+
+            <!-- Asfalto / chão -->
+            <rect x="0" y="360" width="420" height="60" fill="#080f1a"/>
+            <rect x="0" y="358" width="420" height="4" fill="url(#roadGrad)"/>
+            <!-- Faixa de pedestres -->
+            <g fill="rgba(255,255,255,.06)">
+              <rect x="30" y="362" width="18" height="8"/>
+              <rect x="54" y="362" width="18" height="8"/>
+              <rect x="78" y="362" width="18" height="8"/>
+              <rect x="102" y="362" width="18" height="8"/>
+            </g>
+            <!-- Linha central da rua -->
+            <line x1="0" y1="385" x2="420" y2="385" stroke="rgba(240,173,0,.12)" stroke-width="1.5" stroke-dasharray="30 20"/>
+
+            <!-- Linhas de rota (dashed âmbar) -->
+            <line x1="210" y1="295" x2="40" y2="110" stroke="rgba(240,173,0,.18)" stroke-width="1.2" stroke-dasharray="6 5"/>
+            <line x1="210" y1="295" x2="385" y2="105" stroke="rgba(240,173,0,.18)" stroke-width="1.2" stroke-dasharray="6 5"/>
+            <line x1="210" y1="295" x2="30" y2="350" stroke="rgba(240,173,0,.12)" stroke-width="1" stroke-dasharray="5 4"/>
+            <line x1="210" y1="295" x2="395" y2="355" stroke="rgba(240,173,0,.10)" stroke-width="1" stroke-dasharray="5 4"/>
+
+            <!-- Pins de localização -->
+            <!-- Barra da Tijuca -->
+            <g transform="translate(38,102)">
+              <circle cx="0" cy="0" r="7" fill="rgba(240,173,0,.12)" stroke="rgba(240,173,0,.55)" stroke-width="1.2"/>
+              <circle cx="0" cy="0" r="3" fill="#F0AD00"/>
+              <text x="11" y="5" font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.65)">Barra da Tijuca</text>
+            </g>
+            <!-- Zona Sul -->
+            <g transform="translate(342,96)">
+              <circle cx="0" cy="0" r="7" fill="rgba(34,197,94,.12)" stroke="rgba(34,197,94,.55)" stroke-width="1.2"/>
+              <circle cx="0" cy="0" r="3" fill="#22C55E"/>
+              <text x="11" y="5" font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.65)">Zona Sul</text>
+            </g>
+            <!-- Zona Norte -->
+            <g transform="translate(26,338)">
+              <circle cx="0" cy="0" r="6" fill="rgba(240,173,0,.1)" stroke="rgba(240,173,0,.4)" stroke-width="1"/>
+              <circle cx="0" cy="0" r="2.5" fill="rgba(240,173,0,.7)"/>
+              <text x="10" y="4" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.5)">Zona Norte</text>
+            </g>
+            <!-- Recreio -->
+            <g transform="translate(348,340)">
+              <circle cx="0" cy="0" r="6" fill="rgba(240,173,0,.1)" stroke="rgba(240,173,0,.4)" stroke-width="1"/>
+              <circle cx="0" cy="0" r="2.5" fill="rgba(240,173,0,.7)"/>
+              <text x="-60" y="4" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.5)">Recreio</text>
+            </g>
+
+            <!-- VAN DE ENTREGA -->
+            <g filter="url(#vanShadow2)" transform="translate(72, 252)">
+              <!-- Carroceria principal -->
+              <rect x="52" y="8" width="224" height="86" rx="5" fill="url(#vanBody2)"/>
+              <!-- Cabine -->
+              <path d="M0,22 L52,22 L52,94 L0,94 L0,22 Z" fill="url(#vanCab)" rx="5"/>
+              <!-- Teto cabine -->
+              <path d="M4,22 Q18,6 48,6 L52,22 Z" fill="#1a2e48"/>
+              <!-- Parabrisa -->
+              <path d="M6,26 L48,26 L48,80 L6,80 Z" fill="rgba(120,180,255,.08)" stroke="rgba(120,180,255,.15)" stroke-width=".8"/>
+              <!-- Reflexo parabrisa -->
+              <path d="M10,30 L20,30 L20,76 L10,76 Z" fill="rgba(255,255,255,.05)"/>
+              <!-- Farol dianteiro + feixe de luz -->
+              <polygon points="-38,36 6,44 6,58 -38,64" fill="rgba(240,173,0,.05)"/>
+              <ellipse cx="5" cy="51" rx="4" ry="6" fill="rgba(240,173,0,.15)" stroke="rgba(240,173,0,.7)" stroke-width="1"/>
+              <ellipse cx="5" cy="51" rx="1.8" ry="2.8" fill="#FFCC33"/>
+              <!-- Painel lateral com branding -->
+              <rect x="60" y="16" width="208" height="68" rx="2" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)" stroke-width=".8"/>
+              <!-- Faixa âmbar lateral -->
+              <rect x="52" y="84" width="224" height="6" fill="rgba(240,173,0,.6)" rx="1"/>
+              <!-- Texto JDUQUE na van -->
+              <text x="76" y="48" font-family="'Barlow Condensed',sans-serif" font-weight="900" font-size="17" fill="rgba(240,173,0,.75)" letter-spacing=".06em">JDUQUE</text>
+              <text x="76" y="64" font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.28)" letter-spacing=".1em">DESCARTÁVEIS · RIO DE JANEIRO</text>
+              <!-- Porta traseira com handle -->
+              <line x1="168" y1="16" x2="168" y2="88" stroke="rgba(255,255,255,.07)" stroke-width=".8"/>
+              <rect x="156" y="55" width="10" height="4" rx="2" fill="rgba(255,255,255,.18)"/>
+              <!-- Luz traseira -->
+              <rect x="272" y="46" width="6" height="14" rx="2" fill="rgba(255,80,80,.45)" stroke="rgba(255,80,80,.7)" stroke-width=".8"/>
+              <!-- Rodas -->
+              <circle cx="42" cy="94" r="22" fill="#07101e" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/>
+              <circle cx="42" cy="94" r="14" fill="#0f1e34" stroke="rgba(240,173,0,.35)" stroke-width="1.2"/>
+              <circle cx="42" cy="94" r="5" fill="rgba(240,173,0,.65)"/>
+              <!-- Raios roda dianteira -->
+              <line x1="42" y1="80" x2="42" y2="108" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+              <line x1="28" y1="94" x2="56" y2="94" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+              <circle cx="214" cy="94" r="22" fill="#07101e" stroke="rgba(255,255,255,.08)" stroke-width="1.5"/>
+              <circle cx="214" cy="94" r="14" fill="#0f1e34" stroke="rgba(240,173,0,.35)" stroke-width="1.2"/>
+              <circle cx="214" cy="94" r="5" fill="rgba(240,173,0,.65)"/>
+              <line x1="214" y1="80" x2="214" y2="108" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+              <line x1="200" y1="94" x2="228" y2="94" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            </g>
+
+            <!-- Badge: Linha Premium -->
+            <g transform="translate(282,142)">
+              <rect width="124" height="48" rx="9" fill="rgba(10,22,40,.75)" stroke="rgba(240,173,0,.38)" stroke-width="1"/>
+              <rect width="3" height="48" rx="1.5" fill="#F0AD00"/>
+              <text x="14" y="16" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(240,173,0,.95)" letter-spacing=".05em">LINHA PREMIUM</text>
+              <text x="14" y="29" font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.5)">Alta resistência · 100–300L</text>
+              <text x="14" y="40" font-family="'DM Sans',sans-serif" font-size="8" fill="rgba(255,255,255,.3)">100 unidades / pacote</text>
+              <!-- Seta conectora -->
+              <line x1="-22" y1="24" x2="0" y2="24" stroke="rgba(240,173,0,.3)" stroke-width=".8" stroke-dasharray="3 2"/>
+            </g>
+
+            <!-- Badge: Econômica -->
+            <g transform="translate(14,152)">
+              <rect width="118" height="48" rx="9" fill="rgba(10,22,40,.75)" stroke="rgba(34,197,94,.3)" stroke-width="1"/>
+              <rect width="3" height="48" rx="1.5" fill="#22C55E"/>
+              <text x="14" y="16" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(34,197,94,.9)" letter-spacing=".05em">LINHA ECONÔMICA</text>
+              <text x="14" y="29" font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.5)">Uso diário · 40–200L</text>
+              <text x="14" y="40" font-family="'DM Sans',sans-serif" font-size="8" fill="rgba(255,255,255,.3)">100 unidades / pacote</text>
+              <!-- Seta conectora -->
+              <line x1="118" y1="24" x2="140" y2="24" stroke="rgba(34,197,94,.3)" stroke-width=".8" stroke-dasharray="3 2"/>
+            </g>
+
+            <!-- Badge topo: TODO RIO DE JANEIRO -->
+            <g transform="translate(120,42)">
+              <rect width="178" height="32" rx="16" fill="rgba(10,22,40,.72)" stroke="rgba(255,255,255,.12)" stroke-width="1"/>
+              <circle cx="18" cy="16" r="6" fill="rgba(240,173,0,.15)" stroke="rgba(240,173,0,.5)" stroke-width="1"/>
+              <circle cx="18" cy="16" r="2.5" fill="rgba(240,173,0,.9)"/>
+              <text x="32" y="11" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="8.5" fill="rgba(255,255,255,.65)" letter-spacing=".1em">TODO RIO DE JANEIRO</text>
+              <text x="32" y="23" font-family="'DM Sans',sans-serif" font-size="8" fill="rgba(255,255,255,.4)">Capital · Grande Rio · Interior</text>
+            </g>
+
+            <!-- Partículas âmbar -->
+            <circle cx="80" cy="200" r="2.2" fill="rgba(240,173,0,.4)"/>
+            <circle cx="348" cy="185" r="1.8" fill="rgba(240,173,0,.35)"/>
+            <circle cx="372" cy="268" r="2.5" fill="rgba(240,173,0,.2)"/>
+            <circle cx="58" cy="318" r="1.6" fill="rgba(240,173,0,.25)"/>
+            <circle cx="398" cy="345" r="1.2" fill="rgba(240,173,0,.2)"/>
+            <circle cx="160" cy="210" r="1.5" fill="rgba(240,173,0,.3)"/>
+            <circle cx="290" cy="218" r="1.8" fill="rgba(240,173,0,.25)"/>
+          </svg>
+          </svg>
+
+          <div class="hero__img-badge">
+            <div class="hero__img-badge-dot"></div>
+            <div class="hero__img-badge-txt">
+              <strong>Entrega no dia combinado</strong>
+              Capital e interior do Rio de Janeiro
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MÉTRICAS -->
+<section class="mets" aria-label="Números da JDuque">
+  <div class="wrap">
+    <div class="mets__g">
+      <div class="met"><div class="met__v" data-mt="count" data-to="100" data-suffix="%">100%</div><div class="met__l">Entrega garantida</div><div class="met__s">No dia combinado, sempre</div></div>
+      <div class="met"><div class="met__v" data-mt="count" data-to="2" data-suffix="h">2h</div><div class="met__l">Resposta rápida</div><div class="met__s">Cotações via WhatsApp</div></div>
+      <div class="met"><div class="met__v" data-mt="word" data-word="Zero">Zero</div><div class="met__l">Sem contrato</div><div class="met__s">Sem fidelidade, sem burocracia</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- COMO FUNCIONA -->
+<section class="sec sec--alt" id="como-funciona" aria-labelledby="cf-h">
+  <div class="wrap">
+    <div class="sh rv"><span class="sh__lbl">Processo</span><h2 class="sh__h2" id="cf-h">Como funciona</h2><p class="sh__p">Do primeiro contato à entrega recorrente — sem burocracia, sem contrato, sem surpresa.</p></div>
+    <div class="steps">
+
+      <!-- PASSO 1 -->
+      <div class="step rv" data-d="0">
+        <div class="step__visual" aria-hidden="true">
+          <svg viewBox="0 0 320 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="140" fill="#0A1628"/>
+            <!-- Tela de celular -->
+            <rect x="100" y="12" width="120" height="116" rx="12" fill="#0f1e34" stroke="rgba(255,255,255,.1)" stroke-width="1.5"/>
+            <!-- Câmera -->
+            <circle cx="160" cy="21" r="3.5" fill="rgba(255,255,255,.08)"/>
+            <!-- Bubbles de conversa -->
+            <!-- Mensagem do usuário -->
+            <rect x="114" y="36" width="88" height="26" rx="10" fill="rgba(240,173,0,.18)" stroke="rgba(240,173,0,.35)" stroke-width="1"/>
+            <text x="158" y="51" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.8)">Preciso de 3 pacotes</text>
+            <text x="158" y="60" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.8)">240L Premium 👍</text>
+            <!-- Hora -->
+            <text x="195" y="70" text-anchor="end" font-family="'DM Sans',sans-serif" font-size="6" fill="rgba(255,255,255,.3)">10:42</text>
+            <!-- Resposta JDuque -->
+            <rect x="114" y="74" width="92" height="30" rx="10" fill="rgba(34,197,94,.12)" stroke="rgba(34,197,94,.3)" stroke-width="1"/>
+            <text x="160" y="87" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.9)">✓ Cotação enviada!</text>
+            <text x="160" y="97" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7" fill="rgba(255,255,255,.55)">R$ 240,00 · 3 pacotes</text>
+            <text x="195" y="110" text-anchor="end" font-family="'DM Sans',sans-serif" font-size="6" fill="rgba(255,255,255,.3)">10:44 ✓✓</text>
+            <!-- Badge ≤ 2h -->
+            <rect x="12" y="52" width="76" height="28" rx="8" fill="rgba(240,173,0,.1)" stroke="rgba(240,173,0,.3)" stroke-width="1"/>
+            <text x="50" y="63" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(240,173,0,.9)">≤ 2 horas</text>
+            <text x="50" y="74" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.45)">resposta garantida</text>
+            <!-- Seta conectora -->
+            <line x1="88" y1="66" x2="100" y2="66" stroke="rgba(240,173,0,.35)" stroke-width=".8" stroke-dasharray="3 2"/>
+            <!-- Ícone WA correto à esquerda -->
+            <circle cx="42" cy="28" r="14" fill="rgba(34,197,94,.12)" stroke="rgba(34,197,94,.35)" stroke-width="1"/>
+            <path d="M42 18c-5.52 0-10 4.03-10 9 0 1.68.48 3.25 1.32 4.6L32 38l6.62-1.68A10.1 10.1 0 0042 37c5.52 0 10-4.03 10-9s-4.48-9-10-9zm1 13.5h-4v-1.5h4v1.5zm1-3h-6v-1.5h6v1.5zm0-3h-6v-1.5h6v1.5z" fill="rgba(34,197,94,.85)"/>
+          </svg>
+        </div>
+        <div class="step__body">
+          <div class="step__n" aria-hidden="true">01</div>
+          <h3 class="step__t">Você solicita</h3>
+          <p class="step__p">Manda uma mensagem no WhatsApp com o que precisa. Respondemos com cotação em até 2 horas — sem formulário, sem espera.</p>
+        </div>
+      </div>
+
+      <!-- PASSO 2 -->
+      <div class="step rv" data-d="120">
+        <div class="step__visual" aria-hidden="true">
+          <svg viewBox="0 0 320 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="140" fill="#0A1628"/>
+            <!-- Calendário principal -->
+            <rect x="90" y="16" width="140" height="110" rx="10" fill="#0f1e34" stroke="rgba(255,255,255,.08)" stroke-width="1.2"/>
+            <!-- Header calendário -->
+            <rect x="90" y="16" width="140" height="30" rx="10" fill="rgba(240,173,0,.12)"/>
+            <rect x="90" y="36" width="140" height="10" fill="rgba(240,173,0,.12)"/>
+            <text x="160" y="35" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(240,173,0,.9)" letter-spacing=".04em">TODA TERÇA-FEIRA</text>
+            <!-- Grid de semana -->
+            <g font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.25)" text-anchor="middle">
+              <text x="108" y="60">D</text><text x="123" y="60">S</text><text x="138" y="60">T</text>
+              <text x="153" y="60">Q</text><text x="168" y="60">Q</text><text x="183" y="60">S</text><text x="198" y="60">S</text>
+            </g>
+            <!-- Linha semana 1 -->
+            <g font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.45)" text-anchor="middle">
+              <text x="108" y="76">—</text><text x="123" y="76">—</text>
+              <text x="138" y="76" fill="rgba(240,173,0,.9)" font-weight="700">4</text>
+              <text x="153" y="76">5</text><text x="168" y="76">6</text><text x="183" y="76">7</text><text x="198" y="76">8</text>
+            </g>
+            <!-- Destaque: Terça 11 -->
+            <rect x="129" y="82" width="18" height="18" rx="9" fill="rgba(240,173,0,.85)"/>
+            <text x="138" y="94" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="8.5" font-weight="700" fill="#0A1628">11</text>
+            <!-- Demais dias semana 2 -->
+            <g font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.45)" text-anchor="middle">
+              <text x="108" y="94">10</text>
+              <text x="153" y="94">12</text><text x="168" y="94">13</text><text x="183" y="94">14</text><text x="198" y="94">15</text>
+            </g>
+            <!-- Semana 3: mais terças destacadas -->
+            <circle cx="138" cy="107" r="7" fill="rgba(240,173,0,.18)" stroke="rgba(240,173,0,.5)" stroke-width="1"/>
+            <text x="138" y="110.5" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="8" font-weight="700" fill="rgba(240,173,0,.8)">18</text>
+            <g font-family="'DM Sans',sans-serif" font-size="8.5" fill="rgba(255,255,255,.3)" text-anchor="middle">
+              <text x="108" y="110">17</text><text x="123" y="110">—</text>
+              <text x="153" y="110">19</text><text x="168" y="110">20</text><text x="183" y="110">21</text><text x="198" y="110">22</text>
+            </g>
+            <!-- Badge: Entrega automática -->
+            <rect x="14" y="50" width="68" height="46" rx="8" fill="rgba(10,22,40,.8)" stroke="rgba(240,173,0,.25)" stroke-width="1"/>
+            <text x="48" y="63" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="9.5" fill="rgba(240,173,0,.9)">FREQUÊNCIA</text>
+            <text x="48" y="75" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.6)">Semanal</text>
+            <text x="48" y="88" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.6)">Quinzenal</text>
+            <!-- Badge lateral direito -->
+            <rect x="238" y="60" width="68" height="28" rx="8" fill="rgba(34,197,94,.08)" stroke="rgba(34,197,94,.28)" stroke-width="1"/>
+            <text x="272" y="71" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="9" fill="rgba(34,197,94,.9)">SEM CONTRATO</text>
+            <text x="272" y="82" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7" fill="rgba(255,255,255,.4)">cancela quando quiser</text>
+          </svg>
+        </div>
+        <div class="step__body">
+          <div class="step__n" aria-hidden="true">02</div>
+          <h3 class="step__t">Definimos a rota</h3>
+          <p class="step__p">Juntos definimos a frequência e o dia fixo de entrega. Você não precisa lembrar de pedir toda vez — a gente cuida disso.</p>
+        </div>
+      </div>
+
+      <!-- PASSO 3 -->
+      <div class="step rv" data-d="240">
+        <div class="step__visual" aria-hidden="true">
+          <svg viewBox="0 0 320 140" xmlns="http://www.w3.org/2000/svg">
+            <rect width="320" height="140" fill="#0A1628"/>
+            <!-- Círculo de ciclo recorrente -->
+            <circle cx="160" cy="70" r="48" fill="rgba(34,197,94,.05)" stroke="rgba(34,197,94,.2)" stroke-width="1.2" stroke-dasharray="5 4"/>
+            <!-- Setas de ciclo -->
+            <path d="M160,22 A48,48 0 0,1 208,70" fill="none" stroke="rgba(240,173,0,.55)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M208,70 A48,48 0 0,1 160,118" fill="none" stroke="rgba(240,173,0,.35)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M160,118 A48,48 0 0,1 112,70" fill="none" stroke="rgba(240,173,0,.2)" stroke-width="1.5" stroke-linecap="round"/>
+            <path d="M112,70 A48,48 0 0,1 160,22" fill="none" stroke="rgba(240,173,0,.35)" stroke-width="1.5" stroke-linecap="round"/>
+            <!-- Pontas de seta nos arcos -->
+            <polygon points="207,67 211,74 214,68" fill="rgba(240,173,0,.7)"/>
+            <polygon points="162,116 156,120 160,124" fill="rgba(240,173,0,.45)"/>
+            <!-- Ícone de entrega no centro — check limpo -->
+            <circle cx="160" cy="70" r="22" fill="rgba(34,197,94,.1)" stroke="rgba(34,197,94,.3)" stroke-width="1.2"/>
+            <circle cx="160" cy="70" r="14" fill="rgba(34,197,94,.18)" stroke="rgba(34,197,94,.5)" stroke-width="1.2"/>
+            <path d="M152 70l5 5 11-10" stroke="rgba(34,197,94,.95)" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+            <!-- Labels nos arcos -->
+            <text x="204" y="44" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(240,173,0,.7)">Entregamos</text>
+            <text x="200" y="105" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(240,173,0,.55)">Repetimos</text>
+            <text x="108" y="105" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(240,173,0,.4)">Programamos</text>
+            <!-- Badge: Pix -->
+            <rect x="12" y="45" width="74" height="50" rx="8" fill="rgba(10,22,40,.8)" stroke="rgba(255,255,255,.08)" stroke-width="1"/>
+            <text x="49" y="60" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="9.5" fill="rgba(255,255,255,.7)">PAGAMENTO</text>
+            <text x="49" y="72" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(240,173,0,.8)">Pix · Dinheiro</text>
+            <text x="49" y="83" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.45)">No recebimento</text>
+            <!-- Badge: Sem contrato -->
+            <rect x="234" y="52" width="74" height="36" rx="8" fill="rgba(34,197,94,.08)" stroke="rgba(34,197,94,.25)" stroke-width="1"/>
+            <text x="271" y="67" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="9.5" fill="rgba(34,197,94,.9)">ZERO MULTA</text>
+            <text x="271" y="79" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="7.5" fill="rgba(255,255,255,.45)">cancele quando quiser</text>
+          </svg>
+        </div>
+        <div class="step__body">
+          <div class="step__n" aria-hidden="true">03</div>
+          <h3 class="step__t">Entregamos e repetimos</h3>
+          <p class="step__p">Entrega diretamente no local no dia combinado. Pagamento no recebimento: Pix, dinheiro ou transferência. Sem contrato.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Diagrama de fluxo -->
+    <div class="flow rv" data-d="100" aria-hidden="true">
+      <div class="flow__svg-wrap">
+        <svg viewBox="0 0 1080 148" fill="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;display:block;">
+          <defs>
+            <marker id="arr" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+              <path d="M1 1 L7 4 L1 7 Z" fill="rgba(240,173,0,.7)"/>
+            </marker>
+            <linearGradient id="flowLine" x1="0" x2="1" y1="0" y2="0">
+              <stop offset="0%" stop-color="rgba(240,173,0,.15)"/>
+              <stop offset="50%" stop-color="rgba(240,173,0,.5)"/>
+              <stop offset="100%" stop-color="rgba(240,173,0,.15)"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Linha de fundo -->
+          <line x1="120" y1="56" x2="960" y2="56" stroke="url(#flowLine)" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+          <!-- PASSO 1: WhatsApp -->
+          <g transform="translate(60,0)">
+            <circle cx="60" cy="56" r="36" fill="rgba(240,173,0,.07)" stroke="rgba(240,173,0,.25)" stroke-width="1.5"/>
+            <!-- WhatsApp icon simplificado -->
+            <circle cx="60" cy="56" r="16" fill="rgba(34,197,94,.18)" stroke="rgba(34,197,94,.5)" stroke-width="1.2"/>
+            <path d="M54 52c0-3.3 2.7-6 6-6s6 2.7 6 6c0 3.9-6 9-6 9s-6-5.1-6-9zm6-2.5a2.5 2.5 0 100 5 2.5 2.5 0 000-5z" fill="rgba(34,197,94,.9)"/>
+            <text x="60" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)" letter-spacing=".02em">Mensagem</text>
+            <text x="60" y="122" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)" letter-spacing=".02em">no WhatsApp</text>
+            <!-- Bola de número -->
+            <circle cx="88" cy="28" r="11" fill="rgba(240,173,0,.12)" stroke="rgba(240,173,0,.35)" stroke-width="1"/>
+            <text x="88" y="32.5" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(240,173,0,.9)">01</text>
+          </g>
+
+          <!-- Seta 1→2 -->
+          <line x1="162" y1="56" x2="256" y2="56" stroke="rgba(240,173,0,.45)" stroke-width="1.5" marker-end="url(#arr)"/>
+          <!-- Label seta -->
+          <text x="209" y="46" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="rgba(255,255,255,.28)">≤ 2h</text>
+
+          <!-- PASSO 2: Cotação -->
+          <g transform="translate(260,0)">
+            <circle cx="60" cy="56" r="36" fill="rgba(240,173,0,.07)" stroke="rgba(240,173,0,.25)" stroke-width="1.5"/>
+            <!-- Documento ícone -->
+            <rect x="47" y="41" width="26" height="30" rx="2" fill="rgba(240,173,0,.12)" stroke="rgba(240,173,0,.6)" stroke-width="1.2"/>
+            <path d="M47 47h26" stroke="rgba(240,173,0,.4)" stroke-width="1"/>
+            <rect x="51" y="52" width="14" height="2" rx="1" fill="rgba(240,173,0,.6)"/>
+            <rect x="51" y="57" width="10" height="2" rx="1" fill="rgba(240,173,0,.4)"/>
+            <rect x="51" y="62" width="12" height="2" rx="1" fill="rgba(240,173,0,.3)"/>
+            <!-- check -->
+            <circle cx="70" cy="43" r="7" fill="rgba(34,197,94,.2)" stroke="rgba(34,197,94,.6)" stroke-width="1"/>
+            <path d="M67 43l2 2 4-3" stroke="rgba(34,197,94,.9)" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="60" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">Cotação</text>
+            <text x="60" y="122" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">aprovada</text>
+            <circle cx="88" cy="28" r="11" fill="rgba(240,173,0,.12)" stroke="rgba(240,173,0,.35)" stroke-width="1"/>
+            <text x="88" y="32.5" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(240,173,0,.9)">02</text>
+          </g>
+
+          <!-- Seta 2→3 -->
+          <line x1="362" y1="56" x2="456" y2="56" stroke="rgba(240,173,0,.45)" stroke-width="1.5" marker-end="url(#arr)"/>
+          <text x="409" y="46" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="rgba(255,255,255,.28)">1 vez</text>
+
+          <!-- PASSO 3: Rota -->
+          <g transform="translate(460,0)">
+            <circle cx="60" cy="56" r="36" fill="rgba(240,173,0,.07)" stroke="rgba(240,173,0,.25)" stroke-width="1.5"/>
+            <!-- Calendário ícone -->
+            <rect x="45" y="44" width="30" height="26" rx="2" fill="rgba(240,173,0,.1)" stroke="rgba(240,173,0,.5)" stroke-width="1.2"/>
+            <path d="M45 51h30" stroke="rgba(240,173,0,.4)" stroke-width="1"/>
+            <line x1="53" y1="44" x2="53" y2="40" stroke="rgba(240,173,0,.6)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="67" y1="44" x2="67" y2="40" stroke="rgba(240,173,0,.6)" stroke-width="1.5" stroke-linecap="round"/>
+            <rect x="50" y="55" width="5" height="5" rx="1" fill="rgba(240,173,0,.5)"/>
+            <rect x="58" y="55" width="5" height="5" rx="1" fill="rgba(240,173,0,.3)"/>
+            <rect x="66" y="55" width="5" height="5" rx="1" fill="rgba(240,173,0,.3)"/>
+            <rect x="50" y="62" width="5" height="5" rx="1" fill="rgba(240,173,0,.2)"/>
+            <rect x="58" y="62" width="5" height="5" rx="1" fill="rgba(240,173,0,.4)"/>
+            <text x="60" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">Rota</text>
+            <text x="60" y="122" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">programada</text>
+            <circle cx="88" cy="28" r="11" fill="rgba(240,173,0,.12)" stroke="rgba(240,173,0,.35)" stroke-width="1"/>
+            <text x="88" y="32.5" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(240,173,0,.9)">03</text>
+          </g>
+
+          <!-- Seta 3→4 -->
+          <line x1="562" y1="56" x2="656" y2="56" stroke="rgba(240,173,0,.45)" stroke-width="1.5" marker-end="url(#arr)"/>
+          <text x="609" y="46" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="rgba(255,255,255,.28)">dia certo</text>
+
+          <!-- PASSO 4: Entrega -->
+          <g transform="translate(660,0)">
+            <circle cx="60" cy="56" r="36" fill="rgba(240,173,0,.07)" stroke="rgba(240,173,0,.25)" stroke-width="1.5"/>
+            <!-- Caixa / entrega ícone -->
+            <rect x="45" y="48" width="30" height="22" rx="2" fill="rgba(240,173,0,.12)" stroke="rgba(240,173,0,.55)" stroke-width="1.2"/>
+            <path d="M45 55h30" stroke="rgba(240,173,0,.4)" stroke-width="1"/>
+            <path d="M55 48 L60 44 L65 48" stroke="rgba(240,173,0,.6)" stroke-width="1.2" stroke-linejoin="round"/>
+            <rect x="57" y="55" width="6" height="6" rx="1" fill="rgba(240,173,0,.4)" stroke="rgba(240,173,0,.3)" stroke-width=".8"/>
+            <!-- Avião/seta de entrega -->
+            <path d="M72 36 L76 40 L70 42Z" fill="rgba(240,173,0,.7)"/>
+            <text x="60" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">Entrega</text>
+            <text x="60" y="122" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">na portaria</text>
+            <circle cx="88" cy="28" r="11" fill="rgba(240,173,0,.12)" stroke="rgba(240,173,0,.35)" stroke-width="1"/>
+            <text x="88" y="32.5" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(240,173,0,.9)">04</text>
+          </g>
+
+          <!-- Seta 4→5 -->
+          <line x1="762" y1="56" x2="856" y2="56" stroke="rgba(240,173,0,.45)" stroke-width="1.5" marker-end="url(#arr)"/>
+          <text x="809" y="46" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="10" fill="rgba(255,255,255,.28)">automático</text>
+
+          <!-- PASSO 5: Repete -->
+          <g transform="translate(860,0)">
+            <circle cx="60" cy="56" r="36" fill="rgba(34,197,94,.07)" stroke="rgba(34,197,94,.3)" stroke-width="1.5"/>
+            <!-- Seta circular reciclagem -->
+            <path d="M60 40 A16 16 0 0 1 76 56" stroke="rgba(34,197,94,.7)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M76 56 A16 16 0 0 1 60 72" stroke="rgba(34,197,94,.5)" stroke-width="2" stroke-linecap="round"/>
+            <path d="M60 72 A16 16 0 0 1 44 56" stroke="rgba(34,197,94,.35)" stroke-width="2" stroke-linecap="round"/>
+            <!-- Seta ponta -->
+            <path d="M60 38 L56 44 L64 44 Z" fill="rgba(34,197,94,.7)"/>
+            <text x="60" y="108" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">Repete</text>
+            <text x="60" y="122" text-anchor="middle" font-family="'DM Sans',sans-serif" font-size="11" fill="rgba(255,255,255,.55)">sem lembrar</text>
+            <circle cx="88" cy="28" r="11" fill="rgba(34,197,94,.12)" stroke="rgba(34,197,94,.35)" stroke-width="1"/>
+            <text x="88" y="32.5" text-anchor="middle" font-family="'Barlow Condensed',sans-serif" font-weight="700" font-size="11" fill="rgba(34,197,94,.9)">✓</text>
+          </g>
         </svg>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARA QUEM -->
+<section class="sec" aria-labelledby="pq-h">
+  <div class="wrap">
+    <div class="sh rv"><span class="sh__lbl">Público</span><h2 class="sh__h2" id="pq-h">Para quem <em>é?</em></h2><p class="sh__p">A JDuque atende condomínios, empresas e administradoras que precisam de fornecimento confiável sem complicação.</p></div>
+    <div class="aud">
+      <article class="ac rv" data-d="0">
+        <div class="ac__top" style="--ac-img:url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=900&q=80&fit=crop&crop=center')">
+          <svg class="ac__ico" viewBox="0 0 52 52" fill="none" aria-hidden="true"><rect x="8" y="14" width="36" height="34" rx="2" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><rect x="14" y="4" width="24" height="12" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><rect x="16" y="20" width="6" height="6" rx="1" fill="rgba(240,173,0,.5)"/><rect x="26" y="20" width="6" height="6" rx="1" fill="rgba(240,173,0,.5)"/><rect x="16" y="30" width="6" height="6" rx="1" fill="rgba(240,173,0,.35)"/><rect x="26" y="30" width="6" height="6" rx="1" fill="rgba(240,173,0,.35)"/><rect x="20" y="38" width="12" height="10" rx="1" fill="rgba(255,255,255,.15)"/><line x1="8" y1="48" x2="44" y2="48" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/></svg>
+          <h3 class="ac__t">Condomínios</h3><p class="ac__s">Residenciais e comerciais</p>
+        </div>
+        <div class="ac__bod"><ul class="ac__ul"><li>Entrega na portaria no dia e horário definidos com o síndico</li><li>Pedido mínimo de R$80 — ideal para reposição mensal</li><li>Linha premium para áreas comuns e econômica para uso diário</li><li>Kit coleta seletiva completo (5 cores, NBR 10.004)</li></ul></div>
+      </article>
+      <article class="ac rv" data-d="120">
+        <div class="ac__top" style="--ac-img:url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80&fit=crop&crop=center')">
+          <svg class="ac__ico" viewBox="0 0 52 52" fill="none" aria-hidden="true"><rect x="6" y="18" width="40" height="30" rx="2" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><path d="M16 18V12a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v6" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><rect x="12" y="24" width="6" height="5" rx="1" fill="rgba(240,173,0,.45)"/><rect x="23" y="24" width="6" height="5" rx="1" fill="rgba(240,173,0,.45)"/><rect x="34" y="24" width="6" height="5" rx="1" fill="rgba(240,173,0,.45)"/><rect x="12" y="33" width="6" height="5" rx="1" fill="rgba(240,173,0,.28)"/><rect x="23" y="33" width="6" height="5" rx="1" fill="rgba(240,173,0,.28)"/><rect x="34" y="33" width="6" height="5" rx="1" fill="rgba(240,173,0,.28)"/><line x1="6" y1="48" x2="46" y2="48" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/></svg>
+          <h3 class="ac__t">Empresas</h3><p class="ac__s">Escritórios, galpões e lojas</p>
+        </div>
+        <div class="ac__bod"><ul class="ac__ul"><li>Frequência semanal, quinzenal ou mensal conforme sua necessidade</li><li>Múltiplos SKUs em um único pedido — do 20L ao 240L</li><li>Sem contrato de fidelidade: cancela quando precisar</li><li>Pagamento simplificado: Pix ou transferência no recebimento</li></ul></div>
+      </article>
+      <article class="ac rv" data-d="240">
+        <div class="ac__top" style="--ac-img:url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=900&q=80&fit=crop&crop=center')">
+          <svg class="ac__ico" viewBox="0 0 52 52" fill="none" aria-hidden="true"><rect x="8" y="8" width="36" height="36" rx="2" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/><line x1="8" y1="18" x2="44" y2="18" stroke="rgba(255,255,255,.15)" stroke-width="1"/><rect x="14" y="24" width="10" height="3" rx="1.5" fill="rgba(240,173,0,.5)"/><rect x="28" y="24" width="10" height="3" rx="1.5" fill="rgba(255,255,255,.25)"/><rect x="14" y="31" width="14" height="3" rx="1.5" fill="rgba(255,255,255,.2)"/><rect x="32" y="31" width="6" height="3" rx="1.5" fill="rgba(240,173,0,.3)"/><rect x="14" y="38" width="8" height="3" rx="1.5" fill="rgba(255,255,255,.15)"/><rect x="26" y="38" width="12" height="3" rx="1.5" fill="rgba(255,255,255,.2)"/><circle cx="40" cy="13" r="5" fill="rgba(240,173,0,.2)" stroke="rgba(240,173,0,.5)" stroke-width="1.2"/><path d="M38 13l1.5 1.5L42 11" stroke="rgba(240,173,0,.9)" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <h3 class="ac__t">Administradoras</h3><p class="ac__s">Gestão de múltiplos condomínios</p>
+        </div>
+        <div class="ac__bod"><ul class="ac__ul"><li>Gestão de entregas em múltiplos endereços com um único contato</li><li>Programação de rota consolidada para toda a carteira</li><li>Atendimento direto — sem intermediários, sem call center</li><li>Cotação e confirmação por WhatsApp em até 2 horas</li></ul></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUTOS -->
+<section class="sec--prod" id="produtos" aria-labelledby="prod-h">
+  <div class="wrap">
+    <div class="sh rv"><span class="sh__lbl sh__lbl--lt">Catálogo</span><h2 class="sh__h2 sh__h2--lt" id="prod-h">Linha completa. <em>Especificações precisas.</em></h2><p class="sh__p sh__p--lt">03 linhas · 08 SKUs · Rio de Janeiro · 2026</p></div>
+
+    <!-- SHOWCASE: espectro visual de todos os produtos -->
+    <div class="prod-hl rv" data-d="60" aria-hidden="true">
+
+      <!-- Coluna esquerda: headline + linhas -->
       <div>
-        <div class="logo-name"><span class="j">J</span>Duque</div>
-        <div class="logo-sub">Descartáveis</div>
+        <p class="prod-hl__lbl">Todas as linhas disponíveis</p>
+        <h3 class="prod-hl__title">Do banheiro<br>ao contêiner.</h3>
+        <p class="prod-hl__sub">8 SKUs em 6 volumes distintos cobrem qualquer necessidade — de copas e banheiros a galpões industriais e grandes condomínios.</p>
+        <div class="prod-hl__pills">
+          <div class="prod-pill">
+            <span class="prod-pill__dot prod-pill__dot--amb"></span>
+            <div class="prod-pill__left">
+              <span class="prod-pill__name">Linha Premium</span>
+              <span class="prod-pill__vol">100 · 200 · 240 · 300L &nbsp;·&nbsp; alta resistência</span>
+            </div>
+          </div>
+          <div class="prod-pill">
+            <span class="prod-pill__dot prod-pill__dot--grn"></span>
+            <div class="prod-pill__left">
+              <span class="prod-pill__name">Linha Econômica</span>
+              <span class="prod-pill__vol">40 · 60 · 100 · 200L &nbsp;·&nbsp; uso diário geral</span>
+            </div>
+          </div>
+          <div class="prod-pill">
+            <span class="prod-pill__dot prod-pill__dot--blu"></span>
+            <div class="prod-pill__left">
+              <span class="prod-pill__name">Coleta Seletiva</span>
+              <span class="prod-pill__vol">5 cores &nbsp;·&nbsp; ABNT NBR 10.004</span>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-    <div class="hero-content">
-      <div class="hero-eyebrow">
-        <span class="eyebrow-line"></span>
-        <span class="eyebrow-text">Rio de Janeiro</span>
-      </div>
-      <h1 class="hero-h1">O fornecedor que<br>não te deixa<br><em>na mão.</em></h1>
-      <p class="hero-body">Sacos de lixo e descartáveis com entrega programada para condomínios e empresas. Você define o dia — a gente garante o estoque.</p>
-      <div class="hero-pills">
-        <span class="pill">Entrega programada</span>
-        <span class="pill">Atendimento direto</span>
-        <span class="pill">Linha premium e econômica</span>
-        <span class="pill">Coleta seletiva</span>
-      </div>
-    </div>
-  </div>
 
-  <!-- STATS — novo visual integrado ao navy -->
-  <div class="stats-bar">
-    <div class="stat">
-      <div class="stat-icon">
-        <i class="ti ti-circle-check" style="font-size:16px;color:#E8A020;"></i>
+      <!-- Coluna direita: barra de tamanhos -->
+      <div class="prod-sizes-wrap">
+        <p class="prod-sizes-ttl">Espectro de volumes disponíveis</p>
+        <!-- Volumes acima das barras — sem overflow, sem clipping -->
+        <div class="prod-sizes-vals">
+          <span>40L</span>
+          <span>60L</span>
+          <span>100L</span>
+          <span>200L</span>
+          <span>240L</span>
+          <span>300L</span>
+        </div>
+        <!-- Barras puras: sem texto interno -->
+        <div class="prod-sizes-chart">
+          <div class="psc" style="height:18px;background:rgba(34,197,94,.55)"></div>
+          <div class="psc" style="height:28px;background:rgba(34,197,94,.65)"></div>
+          <div class="psc" style="height:38px;background:rgba(240,173,0,.52)"></div>
+          <div class="psc" style="height:50px;background:rgba(240,173,0,.68)"></div>
+          <div class="psc" style="height:60px;background:rgba(240,173,0,.82)"></div>
+          <div class="psc" style="height:72px;background:rgba(240,173,0,.96)"></div>
+        </div>
+        <!-- Labels de uso removidos — a escala visual das barras comunica sozinha -->
       </div>
-      <div class="stat-num">100<span class="stat-unit">%</span></div>
-      <div class="stat-title">Entrega garantida</div>
-      <div class="stat-sub"><span class="stat-amber-dot"></span>No dia combinado, sempre</div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">
-        <i class="ti ti-brand-whatsapp" style="font-size:16px;color:#E8A020;"></i>
-      </div>
-      <div class="stat-num">2<span class="stat-unit">h</span></div>
-      <div class="stat-title">Resposta rápida</div>
-      <div class="stat-sub"><span class="stat-amber-dot"></span>Pedidos e cotações via WhatsApp</div>
-    </div>
-    <div class="stat">
-      <div class="stat-icon">
-        <i class="ti ti-lock-open" style="font-size:16px;color:#E8A020;"></i>
-      </div>
-      <div class="stat-num" style="font-size:26px;letter-spacing:-0.5px;">Livre</div>
-      <div class="stat-title">Sem contrato</div>
-      <div class="stat-sub"><span class="stat-amber-dot"></span>Sem fidelidade, sem burocracia</div>
-    </div>
-  </div>
 
-  <!-- PRODUTOS -->
-  <div class="products-section">
-    <div class="prod-header">
+    </div>
+
+    <div class="pg">
+
+      <!-- 01 PREMIUM -->
+      <article class="pc rv" data-d="0">
+        <div class="pc__popular">Mais popular</div>
+        <div class="pc__hd">
+          <div><span class="pc__bdg">Alta Resistência</span><div class="pc__ti">Linha Premium</div><div class="pc__su">Reforçado · 4 volumes disponíveis</div></div>
+          <div class="pc__nm" aria-hidden="true">01</div>
+        </div>
+        <div class="pc__bd">
+          <div class="bag-col">
+            <div class="bag-wrap"><div class="bag-knot"></div><div class="bag-neck"></div><div class="bag-body"></div></div>
+            <div class="bag-info"><div class="bag-dims">75 × 105 cm</div><div class="bag-ref">Lixeira de cozinha</div></div>
+            <div class="bag-scale" aria-hidden="true"><span class="bag-scale__lbl">100L</span><div class="bag-scale__track"><div class="bag-scale__fill" style="width:36%"></div></div><span class="bag-scale__lbl">300L</span></div>
+          </div>
+          <div class="spec-col">
+            <div class="tabs" role="tablist" aria-label="Volumes — Linha Premium">
+              <button class="tab on" role="tab" aria-selected="true" data-t="p100">100L</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="p200">200L</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="p240">240L</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="p300">300L</button>
+            </div>
+            <div class="pnl-wrap" aria-live="polite">
+              <div id="p100" class="pnl on" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">75 × 105 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Reforçada</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Cozinha e área comum</span></div></div>
+              <div id="p200" class="pnl" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">90 × 130 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Extra reforçada</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Contêineres e corredor</span></div></div>
+              <div id="p240" class="pnl" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">100 × 140 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Extra reforçada</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Condomínios de grande porte</span></div></div>
+              <div id="p300" class="pnl" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">110 × 150 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Extra reforçada</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Grandes condomínios e galpões</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="pc__ft">
+          <a href="https://wa.me/5521974566127?text=Olá%2C%20quero%20cotação%20da%20Linha%20Premium" class="btn-line" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+            Pedir cotação desta linha
+          </a>
+        </div>
+      </article>
+
+      <!-- 02 ECONÔMICA -->
+      <article class="pc rv" data-d="100">
+        <div class="pc__hd">
+          <div><span class="pc__bdg">Custo-Benefício</span><div class="pc__ti">Linha Econômica</div><div class="pc__su">Padrão · 4 volumes disponíveis</div></div>
+          <div class="pc__nm" aria-hidden="true">02</div>
+        </div>
+        <div class="pc__bd">
+          <div class="bag-col">
+            <div class="bag-wrap"><div class="bag-knot"></div><div class="bag-neck"></div><div class="bag-body"></div></div>
+            <div class="bag-info"><div class="bag-dims">50 × 60 cm</div><div class="bag-ref">Banheiro e copa</div></div>
+            <div class="bag-scale" aria-hidden="true"><span class="bag-scale__lbl">40L</span><div class="bag-scale__track"><div class="bag-scale__fill" style="width:9%"></div></div><span class="bag-scale__lbl">200L</span></div>
+          </div>
+          <div class="spec-col">
+            <div class="tabs" role="tablist" aria-label="Volumes — Linha Econômica">
+              <button class="tab on" role="tab" aria-selected="true" data-t="e40">40L</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="e60">60L</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="e100">100L</button>
+              <button class="tab" role="tab" aria-selected="false" data-t="e200">200L</button>
+            </div>
+            <div class="pnl-wrap" aria-live="polite">
+              <div id="e40" class="pnl on" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">50 × 60 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Padrão</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Banheiro e copa</span></div></div>
+              <div id="e60" class="pnl" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">59 × 62 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Padrão</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Cozinha e área de serviço</span></div></div>
+              <div id="e100" class="pnl" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">75 × 105 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Padrão</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Corredor e hall</span></div></div>
+              <div id="e200" class="pnl" role="tabpanel"><div class="sr"><span class="sr__k">Dimensões</span><span class="sr__v">90 × 130 cm</span></div><div class="sr"><span class="sr__k">Un./pacote</span><span class="sr__v">100 unidades</span></div><div class="sr"><span class="sr__k">Espessura</span><span class="sr__v">Padrão</span></div><div class="sr"><span class="sr__k">Uso recomendado</span><span class="sr__v">Contêineres e coleta geral</span></div></div>
+            </div>
+          </div>
+        </div>
+        <div class="pc__ft">
+          <a href="https://wa.me/5521974566127?text=Olá%2C%20quero%20cotação%20da%20Linha%20Econômica" class="btn-line" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+            Pedir cotação desta linha
+          </a>
+        </div>
+      </article>
+
+      <!-- 03 COLETA SELETIVA — cores reais -->
+      <article class="cs pc--fw rv" data-d="200">
+        <div class="cs__hd">
+          <div><span class="cs__nbr">NBR 10.004 · Kit 5 Cores</span><div class="cs__ti">Coleta Seletiva</div><div class="cs__su">100 litros · 100 un./pacote<br>Fornecimento mensal programado</div></div>
+          <div class="pc__nm" aria-hidden="true" style="color:rgba(255,255,255,.05)">03</div>
+        </div>
+        <div class="cs__g">
+
+          <!-- PAPEL — Azul — símbolo: folha + seta Möbius -->
+          <div class="cs__it cs__it--az">
+            <div class="cs__ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Seta de reciclagem (Möbius loop) simplificada -->
+                <path d="M24 6 L30 14 H26 C26 24 32 30 40 30 L36 36 C24 36 18 28 18 14 H14 Z" fill="rgba(255,255,255,.9)"/>
+                <path d="M40 30 L32 24 V28 C28 28 26 26 24 22 C22 26 20 30 14 32 L10 26 C18 22 22 16 26 16 V20 Z" fill="rgba(255,255,255,.7)"/>
+                <!-- Folha de papel estilizada no centro -->
+                <rect x="17" y="18" width="14" height="17" rx="1.5" fill="rgba(255,255,255,.25)" stroke="rgba(255,255,255,.8)" stroke-width="1.2"/>
+                <line x1="20" y1="22" x2="28" y2="22" stroke="rgba(255,255,255,.8)" stroke-width="1.1" stroke-linecap="round"/>
+                <line x1="20" y1="25" x2="28" y2="25" stroke="rgba(255,255,255,.8)" stroke-width="1.1" stroke-linecap="round"/>
+                <line x1="20" y1="28" x2="25" y2="28" stroke="rgba(255,255,255,.8)" stroke-width="1.1" stroke-linecap="round"/>
+                <path d="M25 18 L25 22 L29 22" fill="rgba(21,101,192,.6)" stroke="rgba(255,255,255,.8)" stroke-width="1"/>
+              </svg>
+            </div>
+            <div class="cs__cat">Papel</div>
+            <div class="cs__col">Azul</div>
+            <div class="cs__badge">ABNT NBR 10.004</div>
+          </div>
+
+          <!-- ORGÂNICO — Verde — símbolo: folha + composto -->
+          <div class="cs__it cs__it--vd">
+            <div class="cs__ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Seta de reciclagem circular -->
+                <circle cx="24" cy="24" r="16" stroke="rgba(255,255,255,.35)" stroke-width="1" stroke-dasharray="3 3"/>
+                <!-- Folha orgânica -->
+                <path d="M24 10 C14 10 10 20 10 28 C16 26 20 22 22 18 C22 26 18 34 14 38 C18 38 22 36 24 32 C26 36 30 38 34 38 C30 34 26 26 26 18 C28 22 32 26 38 28 C38 20 34 10 24 10Z" fill="rgba(255,255,255,.88)"/>
+                <!-- Caule -->
+                <line x1="24" y1="32" x2="24" y2="40" stroke="rgba(255,255,255,.8)" stroke-width="1.8" stroke-linecap="round"/>
+                <!-- Detalhes veia folha -->
+                <path d="M24 16 C22 20 20 24 18 28" stroke="rgba(46,125,50,.6)" stroke-width="1" stroke-linecap="round"/>
+                <path d="M24 16 C26 20 28 24 30 28" stroke="rgba(46,125,50,.6)" stroke-width="1" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="cs__cat">Orgânico</div>
+            <div class="cs__col">Verde</div>
+            <div class="cs__badge">ABNT NBR 10.004</div>
+          </div>
+
+          <!-- METAL — Amarelo — símbolo: lata + seta reciclagem -->
+          <div class="cs__it cs__it--am">
+            <div class="cs__ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Lata/cilindro estilizado -->
+                <ellipse cx="24" cy="14" rx="10" ry="3.5" fill="rgba(255,255,255,.85)" stroke="rgba(255,255,255,.9)" stroke-width="1"/>
+                <rect x="14" y="14" width="20" height="20" fill="rgba(255,255,255,.2)" stroke="rgba(255,255,255,.8)" stroke-width="1.2"/>
+                <ellipse cx="24" cy="34" rx="10" ry="3.5" fill="rgba(255,255,255,.55)" stroke="rgba(255,255,255,.8)" stroke-width="1"/>
+                <!-- Reflexo metálico -->
+                <rect x="17" y="15" width="4" height="18" rx="2" fill="rgba(255,255,255,.3)"/>
+                <!-- Anel pull-tab no topo -->
+                <ellipse cx="24" cy="14" rx="4" ry="1.5" fill="rgba(230,81,0,.5)" stroke="rgba(255,255,255,.6)" stroke-width=".8"/>
+                <!-- Símbolo de reciclagem pequeno -->
+                <path d="M21 22 L24 18 L27 22 H25.5 C25.5 26 27 27.5 29 27.5 L27.5 29.5 C23.5 29.5 22 27 22 23 H20.5Z" fill="rgba(255,255,255,.8)"/>
+                <path d="M29 27.5 L27 25.5 V27 C26 27 25.2 26.5 24.8 25.5 C24.4 26.5 23.5 27.5 21.5 28 L20.5 26.5 C22.5 25.5 23 24 23.5 23 V24.5Z" fill="rgba(255,255,255,.6)"/>
+              </svg>
+            </div>
+            <div class="cs__cat">Metal</div>
+            <div class="cs__col">Amarelo</div>
+            <div class="cs__badge">ABNT NBR 10.004</div>
+          </div>
+
+          <!-- PLÁSTICO — Vermelho — símbolo: garrafa PET + código de reciclagem -->
+          <div class="cs__it cs__it--vm">
+            <div class="cs__ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Garrafa PET -->
+                <rect x="20" y="8" width="8" height="4" rx="2" fill="rgba(255,255,255,.85)" stroke="rgba(255,255,255,.9)" stroke-width="1"/>
+                <path d="M18 12 C16 15 14 18 14 22 L14 38 C14 39.1 14.9 40 16 40 L32 40 C33.1 40 34 39.1 34 38 L34 22 C34 18 32 15 30 12 Z" fill="rgba(255,255,255,.18)" stroke="rgba(255,255,255,.8)" stroke-width="1.2"/>
+                <!-- Triângulo de reciclagem com número 1 (PET) -->
+                <path d="M24 16 L31 29 H17 Z" fill="rgba(255,255,255,.0)" stroke="rgba(255,255,255,.85)" stroke-width="1.3" stroke-linejoin="round"/>
+                <text x="24" y="27" text-anchor="middle" font-size="7" font-weight="bold" fill="rgba(255,255,255,.9)" font-family="sans-serif">1</text>
+                <!-- Setas pequenas nos cantos do triângulo -->
+                <path d="M17 29 L19 27" stroke="rgba(255,255,255,.7)" stroke-width="1" stroke-linecap="round"/>
+                <path d="M31 29 L29 27" stroke="rgba(255,255,255,.7)" stroke-width="1" stroke-linecap="round"/>
+                <!-- Reflexo na garrafa -->
+                <rect x="16" y="20" width="3" height="12" rx="1.5" fill="rgba(255,255,255,.2)"/>
+                <!-- Tampa -->
+                <rect x="21" y="6" width="6" height="3" rx="1" fill="rgba(255,255,255,.7)"/>
+              </svg>
+            </div>
+            <div class="cs__cat">Plástico</div>
+            <div class="cs__col">Vermelho</div>
+            <div class="cs__badge">ABNT NBR 10.004</div>
+          </div>
+
+          <!-- VIDRO — Roxo — símbolo: garrafa de vidro + seta reciclagem -->
+          <div class="cs__it cs__it--rx">
+            <div class="cs__ico" aria-hidden="true">
+              <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Garrafa de vidro estilizada -->
+                <rect x="20" y="8" width="8" height="3" rx="1.5" fill="rgba(255,255,255,.85)" stroke="rgba(255,255,255,.9)" stroke-width="1"/>
+                <path d="M20 11 L18 16 L14 22 L14 39 C14 39.6 14.4 40 15 40 L33 40 C33.6 40 34 39.6 34 39 L34 22 L30 16 L28 11 Z" fill="rgba(255,255,255,.15)" stroke="rgba(255,255,255,.75)" stroke-width="1.2"/>
+                <!-- Reflexo curvo do vidro -->
+                <path d="M17 22 C17 20 18 17 19 15" stroke="rgba(255,255,255,.55)" stroke-width="2" stroke-linecap="round"/>
+                <path d="M17 28 L17 38" stroke="rgba(255,255,255,.22)" stroke-width="2" stroke-linecap="round"/>
+                <!-- Símbolo de reciclagem (setas Möbius) no corpo -->
+                <path d="M22 24 L24 20 L26 24 H25 C25 28 26.5 29 28 29 L27 31 C24 31 23 29 23 25 H22Z" fill="rgba(255,255,255,.75)"/>
+                <path d="M28 29 L26.5 27.5 V28.5 C25.8 28.5 25.3 28 25 27 C24.7 28 24 29 22.5 29.5 L22 28 C23.5 27 24 26 24.2 25 V26Z" fill="rgba(255,255,255,.55)"/>
+                <!-- Gargalo détail -->
+                <rect x="19" y="11" width="10" height="5" rx="1" fill="rgba(255,255,255,.12)" stroke="rgba(255,255,255,.5)" stroke-width=".8"/>
+              </svg>
+            </div>
+            <div class="cs__cat">Vidro</div>
+            <div class="cs__col">Roxo</div>
+            <div class="cs__badge">ABNT NBR 10.004</div>
+          </div>
+
+        </div>
+        <div class="cs__ft">
+          <span class="cs__inf">5 cores · 100 litros por cor · 100 un./pacote · Entrega mensal programada</span>
+          <a href="https://wa.me/5521974566127?text=Olá%2C%20quero%20cotação%20do%20Kit%20Coleta%20Seletiva" class="btn-line" style="width:auto;display:inline-flex" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+            Pedir cotação deste kit
+          </a>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- TABELA COMPARATIVA -->
+    <div class="comp rv">
+      <div class="comp__head">
+        <div class="comp__lbl">Comparativo</div>
+        <div class="comp__title">Qual linha escolher?</div>
+      </div>
+      <div class="comp-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Característica</th>
+              <th class="th--prem">Premium</th>
+              <th class="th--econ">Econômica</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Volumes disponíveis</td><td>100L · 200L · 240L · 300L</td><td>40L · 60L · 100L · 200L</td></tr>
+            <tr><td>Espessura</td><td class="hi">Reforçada / Extra reforçada</td><td>Padrão</td></tr>
+            <tr><td>Indicado para</td><td class="hi">Alto fluxo, resíduos pesados</td><td>Uso diário geral</td></tr>
+            <tr><td>Áreas comuns do condomínio</td><td class="hi">Recomendado</td><td>Adequado</td></tr>
+            <tr><td>Contêineres (200L+)</td><td class="hi">Extra reforçado</td><td>Padrão</td></tr>
+            <tr><td>Un. por pacote</td><td>100 unidades</td><td>100 unidades</td></tr>
+            <tr><td>Pedido mínimo</td><td colspan="2" style="text-align:center;color:rgba(255,255,255,.5)">R$ 80,00 em qualquer combinação de linhas</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- DIVIDER: dark → light -->
+<div class="sec-div" aria-hidden="true" style="background:var(--ink)">
+  <svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,0 L1440,52 L1440,52 L0,52 Z" fill="#F5F4EF"/><path d="M0,0 L720,36 L1440,52 L1440,52 L0,52 Z" fill="#F5F4EF" opacity=".5"/></svg>
+</div>
+
+<!-- POR QUE JDUQUE -->
+<section class="sec sec--alt" id="por-que" aria-labelledby="pq2-h">
+  <div class="wrap">
+    <div class="sh rv"><span class="sh__lbl">Diferenciais</span><h2 class="sh__h2" id="pq2-h">Por que a <em>JDuque.</em></h2></div>
+    <div class="rg">
+      <div class="rc rv" data-d="0">
+        <div class="rc__ico" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="18" rx="2" stroke="var(--amber-d)" stroke-width="1.5"/><path d="M16 2v4M8 2v4M3 10h18" stroke="var(--amber-d)" stroke-width="1.5" stroke-linecap="round"/><rect x="7" y="14" width="4" height="4" rx=".5" fill="var(--amber-d)"/></svg>
+        </div>
+        <h3 class="rc__t">Entrega programada</h3>
+        <p class="rc__p">Você define a frequência. A gente entrega no dia combinado — sem precisar lembrar de pedir, sem depender de estoque na última hora.</p>
+      </div>
+      <div class="rc rv" data-d="120">
+        <div class="rc__ico" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="var(--amber-d)"/></svg>
+        </div>
+        <h3 class="rc__t">Fornecedor local</h3>
+        <p class="rc__p">Empresa carioca, atendimento direto. Sem call center, sem ticket — fala com quem resolve na hora, pelo WhatsApp.</p>
+      </div>
+      <div class="rc rv" data-d="240">
+        <div class="rc__ico" aria-hidden="true">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 3L3 8v8l9 5 9-5V8L12 3z" stroke="var(--amber-d)" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 8v8M8 10l4-2 4 2" stroke="var(--amber-d)" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </div>
+        <h3 class="rc__t">Produto certo</h3>
+        <p class="rc__p">Premium ou econômico. Indicamos o que faz sentido para o volume e o perfil do seu condomínio — sem empurrar o que você não precisa.</p>
+      </div>
+    </div>
+
+    <!-- TRUST BLOCK -->
+    <div class="trust rv" id="contato">
       <div>
-        <div class="prod-eyebrow">
-          <span class="eyebrow-line"></span>
-          <span class="eyebrow-text">Especificações de produto</span>
+        <h3 class="trust__h">Informações<br>comerciais</h3>
+        <div class="til">
+          <div class="ti"><div class="ti__ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" stroke="rgba(240,173,0,.8)" stroke-width="1.5"/><path d="M12 6v6l4 2" stroke="rgba(240,173,0,.8)" stroke-width="1.5" stroke-linecap="round"/></svg></div><div><div class="ti__l">Pedido mínimo</div><div class="ti__v">R$ 80,00</div></div></div>
+          <div class="ti"><div class="ti__ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="2" y="5" width="20" height="14" rx="2" stroke="rgba(240,173,0,.8)" stroke-width="1.5"/><path d="M2 10h20" stroke="rgba(240,173,0,.8)" stroke-width="1.5"/></svg></div><div><div class="ti__l">Pagamento</div><div class="ti__v">Pix, dinheiro ou transferência · No recebimento</div></div></div>
+          <div class="ti"><div class="ti__ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><rect x="1" y="3" width="15" height="13" rx="1" stroke="rgba(240,173,0,.8)" stroke-width="1.5"/><path d="M16 8l5 3-5 3V8z" stroke="rgba(240,173,0,.8)" stroke-width="1.5" stroke-linejoin="round"/></svg></div><div><div class="ti__l">Entrega</div><div class="ti__v">Diretamente no local, no dia combinado</div></div></div>
+          <div class="ti"><div class="ti__ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="rgba(240,173,0,.8)"/></svg></div><div><div class="ti__l">Área de entrega</div><div class="ti__v">Barra da Tijuca · Jacarépaguá · Recreio · Zona Sul · Zona Norte · consulte disponibilidade</div></div></div>
+          <div class="ti"><div class="ti__ic" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" fill="rgba(240,173,0,.8)"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z" fill="rgba(240,173,0,.8)"/></svg></div><div><div class="ti__l">Atendimento</div><div class="ti__v">(21) 97456-6127 · WhatsApp · Seg–Sex · Resposta em até 2h</div></div></div>
         </div>
-        <h2 class="prod-h2">Linha completa.<br>Especificações precisas.</h2>
       </div>
-      <div class="header-count">
-        <span class="hc-num">03</span>
-        linhas disponíveis<br>
-        09 SKUs · Rio de Janeiro
+      <div class="trust__r">
+        <div class="tq">
+          <div class="tq__label">Nossa posição</div>
+          <p>Saco de lixo não pode faltar. Por isso a entrega precisa ser certa — não aproximada. Trabalhamos com pedido programado porque síndico e administradora têm mais o que pensar do que controlar estoque de insumo básico.</p>
+        </div>
+        <a href="https://wa.me/5521974566127" class="btn-wa" style="justify-content:center" target="_blank" rel="noopener noreferrer">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+          Falar no WhatsApp agora
+        </a>
       </div>
     </div>
 
-    <div class="table-header">
-      <div class="th-cell">#</div>
-      <div class="th-cell">Produto</div>
-      <div class="th-cell">Indicação</div>
-    </div>
+    <!-- Painel de cobertura — REDESIGN v9 -->
+    <div class="cov-panel rv" data-d="80">
 
-    <!-- LINHA 01 -->
-    <div class="linha-row featured">
-      <div class="cell"><span class="cell-idx amber">01</span></div>
-      <div class="cell" style="flex-direction:column;align-items:flex-start;gap:0;">
-        <div class="prod-info" style="width:100%;">
-          <div class="prod-tag amber">Premium · Reforçado</div>
-          <div class="prod-name">Alta Resistência</div>
-          <div class="sz-section">
-            <div class="sz-section-label">Toque para ver especificações</div>
-            <div class="sz-row">
-              <div class="sz-btn" onclick="toggleSz(this,'p60')"><span class="sz-num">60</span><span class="sz-unit">litros</span></div>
-              <div class="sz-btn" onclick="toggleSz(this,'p100')"><span class="sz-num">100</span><span class="sz-unit">litros</span></div>
-              <div class="sz-btn" onclick="toggleSz(this,'p200')"><span class="sz-num">200</span><span class="sz-unit">litros</span></div>
-              <div class="sz-btn" onclick="toggleSz(this,'p240')"><span class="sz-num">240</span><span class="sz-unit">litros</span></div>
-            </div>
-            <div class="sz-panel" id="p60">
-              <div class="sz-panel-header"><span class="sz-panel-title">60 litros — Premium</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">59 × 62 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Reforçada</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Banheiro e escritório</div></div>
-              </div>
-            </div>
-            <div class="sz-panel" id="p100">
-              <div class="sz-panel-header"><span class="sz-panel-title">100 litros — Premium</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">75 × 105 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Reforçada</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Cozinha e área comum</div></div>
-              </div>
-            </div>
-            <div class="sz-panel" id="p200">
-              <div class="sz-panel-header"><span class="sz-panel-title">200 litros — Premium</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">90 × 130 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Extra reforçada</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Contêineres e corredor</div></div>
-              </div>
-            </div>
-            <div class="sz-panel" id="p240">
-              <div class="sz-panel-header"><span class="sz-panel-title">240 litros — Premium</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">100 × 140 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Extra reforçada</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Condomínios de grande porte</div></div>
-              </div>
-            </div>
+      <!-- Headline band (stats moved para dentro dos tier cards) -->
+      <div class="cov-hl">
+        <span class="cov-hl__badge">Área de entrega</span>
+        <h3 class="cov-hl__title">Capital <em>e interior</em><br>do Rio de Janeiro.</h3>
+        <p class="cov-hl__sub">Atendemos regularmente a capital carioca — e chegamos ao interior e Grande Rio mediante consulta de rota via WhatsApp.</p>
+      </div>
+
+      <!-- Coverage Signal Tiers — substitui o mapa SVG -->
+      <div class="cov-tiers">
+
+        <!-- TIER 1: Capital ███ -->
+        <div class="cov-tier cov-tier--1">
+          <div class="cov-tier__signal" aria-hidden="true">
+            <div class="cov-tier__sig-bar cov-tier__sig-bar--on" style="height:10px"></div>
+            <div class="cov-tier__sig-bar cov-tier__sig-bar--on" style="height:15px"></div>
+            <div class="cov-tier__sig-bar cov-tier__sig-bar--on" style="height:20px"></div>
+          </div>
+          <div class="cov-tier__status">Atendimento regular</div>
+          <div class="cov-tier__name">Capital</div>
+          <div class="cov-tier__geo">Rio de Janeiro · RJ</div>
+          <div class="cov-tier__count">20+ bairros</div>
+          <div class="cov-tier__hoods">
+            <span class="cov-tier__hood">Barra da Tijuca</span>
+            <span class="cov-tier__hood">Recreio</span>
+            <span class="cov-tier__hood">Jacarépaguá</span>
+            <span class="cov-tier__hood">Freguesia</span>
+            <span class="cov-tier__hood">Botafogo</span>
+            <span class="cov-tier__hood">Copacabana</span>
+            <span class="cov-tier__hood">Ipanema</span>
+            <span class="cov-tier__hood">Leblon</span>
+            <span class="cov-tier__hood">Flamengo</span>
+            <span class="cov-tier__hood">Tijuca</span>
+            <span class="cov-tier__hood">Vila Isabel</span>
+            <span class="cov-tier__hood">Méier</span>
+            <span class="cov-tier__hood">Madureira</span>
+            <span class="cov-tier__hood">Centro</span>
+            <span class="cov-tier__hood">Lapa</span>
+            <span class="cov-tier__hood">e adjacências</span>
           </div>
         </div>
-      </div>
-      <div class="cell">
-        <div class="qual-badge strong">
-          <i class="ti ti-shield-check" style="font-size:18px;color:#E8A020;"></i>
-          <div class="qual-text amber">Alta<br>resistência</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- LINHA 02 -->
-    <div class="linha-row">
-      <div class="cell"><span class="cell-idx">02</span></div>
-      <div class="cell" style="flex-direction:column;align-items:flex-start;gap:0;">
-        <div class="prod-info" style="width:100%;">
-          <div class="prod-tag dim">Econômica · Padrão</div>
-          <div class="prod-name">Custo-Benefício</div>
-          <div class="sz-section">
-            <div class="sz-section-label">Toque para ver especificações</div>
-            <div class="sz-row">
-              <div class="sz-btn dim" onclick="toggleSz(this,'e20')"><span class="sz-num dim">20</span><span class="sz-unit dim">litros</span></div>
-              <div class="sz-btn dim" onclick="toggleSz(this,'e40')"><span class="sz-num dim">40</span><span class="sz-unit dim">litros</span></div>
-              <div class="sz-btn dim" onclick="toggleSz(this,'e60')"><span class="sz-num dim">60</span><span class="sz-unit dim">litros</span></div>
-              <div class="sz-btn dim" onclick="toggleSz(this,'e100')"><span class="sz-num dim">100</span><span class="sz-unit dim">litros</span></div>
-              <div class="sz-btn dim" onclick="toggleSz(this,'e200')"><span class="sz-num dim">200</span><span class="sz-unit dim">litros</span></div>
-            </div>
-            <div class="sz-panel" id="e20">
-              <div class="sz-panel-header dim"><span class="sz-panel-title dim">20 litros — Econômica</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">40 × 50 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Padrão</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Lixeiras pequenas e mesas</div></div>
-              </div>
-            </div>
-            <div class="sz-panel" id="e40">
-              <div class="sz-panel-header dim"><span class="sz-panel-title dim">40 litros — Econômica</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">50 × 60 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Padrão</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Banheiro e copa</div></div>
-              </div>
-            </div>
-            <div class="sz-panel" id="e60">
-              <div class="sz-panel-header dim"><span class="sz-panel-title dim">60 litros — Econômica</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">59 × 62 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Padrão</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Cozinha e área de serviço</div></div>
-              </div>
-            </div>
-            <div class="sz-panel" id="e100">
-              <div class="sz-panel-header dim"><span class="sz-panel-title dim">100 litros — Econômica</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">75 × 105 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Padrão</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Corredor e hall</div></div>
-              </div>
-            </div>
-            <div class="sz-panel" id="e200">
-              <div class="sz-panel-header dim"><span class="sz-panel-title dim">200 litros — Econômica</span></div>
-              <div class="sz-panel-body">
-                <div class="sz-spec"><div class="sz-spec-label">Dimensões</div><div class="sz-spec-value">90 × 130 cm</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Un. por pacote</div><div class="sz-spec-value">100 unidades</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Espessura</div><div class="sz-spec-value">Padrão</div></div>
-                <div class="sz-spec"><div class="sz-spec-label">Uso ideal</div><div class="sz-spec-value">Contêineres e coleta geral</div></div>
-              </div>
-            </div>
+        <!-- TIER 2: Grande Rio ██░ -->
+        <div class="cov-tier cov-tier--2">
+          <div class="cov-tier__signal" aria-hidden="true">
+            <div class="cov-tier__sig-bar cov-tier__sig-bar--on" style="height:10px"></div>
+            <div class="cov-tier__sig-bar cov-tier__sig-bar--on" style="height:15px"></div>
+            <div class="cov-tier__sig-bar" style="height:20px"></div>
+          </div>
+          <div class="cov-tier__status">Consulte disponibilidade</div>
+          <div class="cov-tier__name">Grande Rio</div>
+          <div class="cov-tier__geo">Região Metropolitana</div>
+          <div class="cov-tier__count">5 municípios</div>
+          <div class="cov-tier__hoods">
+            <span class="cov-tier__hood">Niterói</span>
+            <span class="cov-tier__hood">São Gonçalo</span>
+            <span class="cov-tier__hood">Duque de Caxias</span>
+            <span class="cov-tier__hood">Nova Iguaçu</span>
+            <span class="cov-tier__hood">Belford Roxo</span>
           </div>
         </div>
-      </div>
-      <div class="cell">
-        <div class="qual-badge daily">
-          <i class="ti ti-sun" style="font-size:18px;color:rgba(255,255,255,0.25);"></i>
-          <div class="qual-text dim">Dia<br>a dia</div>
-        </div>
-      </div>
-    </div>
 
-    <!-- COLETA -->
-    <div class="coleta-row">
-      <div class="coleta-top">
-        <span class="cell-idx teal" style="padding-top:2px;">03</span>
-        <div class="coleta-content">
-          <div class="prod-tag teal">Coleta Seletiva · NBR 10.004</div>
-          <div class="prod-name" style="margin-bottom:6px;">Kit 5 Cores</div>
-          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
-            <div style="font-size:11px;color:rgba(255,255,255,0.35);line-height:1.6;">Separação de resíduos por categoria. Fornecimento mensal programado. 100 unidades por pacote.</div>
-            <div class="sz-btn" style="background:rgba(78,205,196,0.06);border-color:rgba(78,205,196,0.25);cursor:default;flex-shrink:0;">
-              <span class="sz-num" style="color:#4ECDC4;">100</span>
-              <span class="sz-unit" style="color:rgba(78,205,196,0.4);">litros</span>
-            </div>
+        <!-- TIER 3: Interior █░░ -->
+        <div class="cov-tier cov-tier--3">
+          <div class="cov-tier__signal" aria-hidden="true">
+            <div class="cov-tier__sig-bar cov-tier__sig-bar--on" style="height:10px"></div>
+            <div class="cov-tier__sig-bar" style="height:15px"></div>
+            <div class="cov-tier__sig-bar" style="height:20px"></div>
           </div>
+          <div class="cov-tier__status">Verifique sua rota</div>
+          <div class="cov-tier__name">Interior</div>
+          <div class="cov-tier__geo">Estado do Rio de Janeiro</div>
+          <div class="cov-tier__count">92+ municípios</div>
+          <div class="cov-tier__hoods">
+            <span class="cov-tier__hood">Petrópolis</span>
+            <span class="cov-tier__hood">Teresópolis</span>
+            <span class="cov-tier__hood">Volta Redonda</span>
+            <span class="cov-tier__hood">Cabo Frio</span>
+            <span class="cov-tier__hood">Angra dos Reis</span>
+            <span class="cov-tier__hood">Macaé</span>
+            <span class="cov-tier__hood">e outros</span>
+          </div>
+          <a href="https://wa.me/5521974566127?text=Olá%2C%20quero%20saber%20se%20vocês%20entregam%20no%20meu%20bairro" class="cov-tier__cta" target="_blank" rel="noopener noreferrer">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
+            Verificar meu bairro
+          </a>
+        </div>
+
+      </div>
+
+            <!-- Strip interior: municípios do estado -->
+      <div class="cov-interior">
+        <span class="cov-int__lbl">Interior do Estado — consulte:</span>
+        <div class="cov-int__cities">
+          <span class="cov-int__city">Petrópolis</span>
+          <span class="cov-int__city">Teresópolis</span>
+          <span class="cov-int__city">Niterói</span>
+          <span class="cov-int__city">São Gonçalo</span>
+          <span class="cov-int__city">Duque de Caxias</span>
+          <span class="cov-int__city">Nova Iguaçu</span>
+          <span class="cov-int__city">Belford Roxo</span>
+          <span class="cov-int__city">Volta Redonda</span>
+          <span class="cov-int__city">Cabo Frio</span>
+          <span class="cov-int__city">Angra dos Reis</span>
+          <span class="cov-int__city">Macaé</span>
+          <span class="cov-int__city">Campos dos Goytacazes</span>
+          <span class="cov-int__city">Resende</span>
+          <span class="cov-int__city">Itaboraí</span>
+          <span class="cov-int__city">Maricá</span>
+          <span class="cov-int__city">Paraty</span>
+          <span class="cov-int__city">+ consulte outros</span>
         </div>
       </div>
-      <div class="coleta-specs">
-        <div class="cs-item"><div class="cs-bar" style="background:#3B82F6;"></div><div class="cs-material">Papel</div><div class="cs-cor">AZUL</div></div>
-        <div class="cs-item"><div class="cs-bar" style="background:#22C55E;"></div><div class="cs-material">Vidro</div><div class="cs-cor">VERDE</div></div>
-        <div class="cs-item"><div class="cs-bar" style="background:#EAB308;"></div><div class="cs-material">Metal</div><div class="cs-cor">AMARELO</div></div>
-        <div class="cs-item"><div class="cs-bar" style="background:#EF4444;"></div><div class="cs-material">Plástico</div><div class="cs-cor">VERMELHO</div></div>
-        <div class="cs-item"><div class="cs-bar" style="background:#A855F7;"></div><div class="cs-material">Orgânico</div><div class="cs-cor">ROXO</div></div>
-      </div>
+
     </div>
 
-    <div class="prod-footer">
-      <span class="fb-note">REV 2026.1 · JDUQUE DESCARTÁVEIS · RIO DE JANEIRO</span>
-      <span class="fb-cta">Solicitar cotação <span class="fb-arrow"></span></span>
-    </div>
   </div>
-
-  <!-- POR QUE -->
-  <div class="why-section">
-    <div class="hero-eyebrow" style="position:relative;z-index:1;">
-      <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">Por que a JDuque</span>
-    </div>
-    <h2 style="font-family:'Cormorant Garamond',Georgia,serif;font-size:34px;font-weight:700;color:#fff;line-height:1.1;position:relative;z-index:1;">Três razões que fazem<br>a diferença.</h2>
-    <div class="why-bg-num">3</div>
-    <div class="why-grid">
-      <div class="why-item accent">
-        <div class="why-num">01</div>
-        <div class="why-title">Entrega programada</div>
-        <div class="why-body">Você define a frequência. A gente entrega no dia combinado — sem precisar lembrar de pedir.</div>
+</section>
+<section class="sec" id="faq" aria-labelledby="faq-h">
+  <div class="wrap">
+    <div class="sh rv"><span class="sh__lbl">Dúvidas frequentes</span><h2 class="sh__h2" id="faq-h">Perguntas <em>comuns.</em></h2><p class="sh__p">O que síndicos, administradoras e empresas costumam perguntar antes de fechar.</p></div>
+    <div class="faq-list rv">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Qual a área de entrega?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span></button>
+        <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Atendemos regularmente toda a capital — Barra da Tijuca, Jacarépaguá, Recreio dos Bandeirantes, Zona Sul, Zona Norte, Centro e adjacências. Para o interior do estado e Grande Rio (Niterói, Duque de Caxias, Nova Iguaçu, Petrópolis, Volta Redonda, Cabo Frio, entre outros), fazemos a consulta de rota via WhatsApp. Resposta em até 2 horas.</div></div></div>
       </div>
-      <div class="why-item">
-        <div class="why-num">02</div>
-        <div class="why-title">Fornecedor local</div>
-        <div class="why-body">Empresa carioca, atendimento direto. Sem call center — fala com quem resolve na hora.</div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Preciso assinar contrato ou ter fidelidade?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span></button>
+        <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Não. Operamos sem contrato de fidelidade. Você pode fazer pedidos recorrentes com frequência programada ou pedidos avulsos quando precisar — e cancela quando quiser, sem burocracia e sem multa.</div></div></div>
       </div>
-      <div class="why-item">
-        <div class="why-num">03</div>
-        <div class="why-title">Produto certo</div>
-        <div class="why-body">Premium ou econômico. Indicamos o que faz sentido para o perfil do seu condomínio.</div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Posso misturar tamanhos e linhas no mesmo pedido?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span></button>
+        <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Sim. Um único pedido pode combinar qualquer volume da Linha Premium, Econômica e/ou Kit Coleta Seletiva, desde que o valor mínimo de R$80 seja atingido no total.</div></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Vocês emitem nota fiscal?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span></button>
+        <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Sim, emitimos nota fiscal eletrônica para pessoas jurídicas mediante solicitação no momento do pedido. Informe seu CNPJ ao fazer o contato via WhatsApp.</div></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Qual a diferença entre Linha Premium e Econômica?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span></button>
+        <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">A Premium usa material reforçado (extra reforçado nos volumes 200L e 240L), indicada para ambientes com alto fluxo e resíduos mais pesados como contêineres de corredor e grandes condomínios. A Econômica tem espessura padrão, ideal para uso diário geral em escritórios, copas e espaços comuns de menor demanda.</div></div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Como funciona a entrega programada?<span class="faq-icon" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg></span></button>
+        <div class="faq-a-wrap"><div class="faq-a-inner"><div class="faq-a">Após o primeiro pedido, combinamos com você uma frequência fixa (semanal, quinzenal ou mensal) e um dia de entrega. A partir daí, entregamos automaticamente nessa data sem que você precise lembrar de pedir. Você pode ajustar ou pausar a qualquer momento via WhatsApp.</div></div></div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- PROMISE -->
-  <div class="promise-section">
-    <div>
-      <span class="promise-quote-mark">"</span>
-      <div class="promise-text">Saco de lixo não pode faltar. Por isso a entrega precisa ser certa — não aproximada.</div>
-      <div class="promise-sub">A JDuque trabalha com pedido programado porque síndico e administradora têm mais o que pensar do que controlar estoque de insumo básico.</div>
-    </div>
-    <div class="promise-right">
-      <div class="promise-item">
-        <div class="pi-dot"></div>
-        <div class="pi-text"><strong>Pedido mínimo R$ 80</strong>Entrega diretamente no condomínio ou empresa, no dia da sua rota.</div>
+<!-- DEPOIMENTOS -->
+<section class="sec sec--dark" aria-labelledby="dep-h">
+  <div class="wrap">
+    <div class="sh sh--c rv"><span class="sh__lbl sh__lbl--lt">Depoimentos</span><h2 class="sh__h2 sh__h2--lt" id="dep-h">O que dizem os <em>clientes.</em></h2><p class="sh__p sh__p--lt">Condomínios e empresas que confiam na JDuque para manter o estoque em dia.</p></div>
+    <div class="tg">
+      <div class="tc rv" data-d="0">
+        <div class="tc__st" aria-label="5 de 5 estrelas"><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span></div>
+        <p class="tc__q">"Fechamos — sem contrato, na verdade — logo no primeiro pedido. A entrega saiu no dia exato combinado. Para um condomínio de 120 unidades, ter isso resolvido automaticamente é um alívio enorme."</p>
+        <div class="tc__div"></div>
+        <div class="tc__m"><div class="tc__av" aria-hidden="true">MA</div><div><div class="tc__nm">Marcos A.</div><div class="tc__rl">Síndico · Condomínio em Barra da Tijuca, RJ</div></div></div>
       </div>
-      <div class="promise-item">
-        <div class="pi-dot"></div>
-        <div class="pi-text"><strong>Pagamento no recebimento</strong>Pix, dinheiro ou transferência. Sem burocracia.</div>
+      <div class="tc rv" data-d="120">
+        <div class="tc__st" aria-label="5 de 5 estrelas"><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span></div>
+        <p class="tc__q">"Gerenciamos 14 condomínios e sempre tínhamos problema com fornecedor de descartável. Com a JDuque programamos tudo de uma vez e esquecemos. Funciona sem precisar lembrar de pedir."</p>
+        <div class="tc__div"></div>
+        <div class="tc__m"><div class="tc__av" aria-hidden="true">RC</div><div><div class="tc__nm">Renata C.</div><div class="tc__rl">Ger. Operacional · Administradora na Zona Sul, RJ</div></div></div>
       </div>
-      <div class="promise-item">
-        <div class="pi-dot"></div>
-        <div class="pi-text"><strong>Atendimento via WhatsApp</strong>Pedidos, dúvidas e cotações. Resposta em até 2 horas.</div>
+      <div class="tc rv" data-d="240">
+        <div class="tc__st" aria-label="4.5 de 5 estrelas"><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__s" aria-hidden="true">★</span><span class="tc__sh" aria-hidden="true">★</span></div>
+        <p class="tc__q">"Escritório com 60 pessoas. Resposta no WhatsApp em menos de uma hora, entrega no dia seguinte. Preço justo e atendimento que parece de empresa grande com atenção de empresa local."</p>
+        <div class="tc__div"></div>
+        <div class="tc__m"><div class="tc__av" aria-hidden="true">FP</div><div><div class="tc__nm">Felipe P.</div><div class="tc__rl">Coord. de Facilities · Empresa em Jacarépaguá, RJ</div></div></div>
       </div>
     </div>
   </div>
+</section>
 
-  <!-- CTA -->
-  <div class="cta-section">
-    <div class="cta-bg-jd">JD</div>
-    <div class="cta-left">
-      <h3>Solicite sua cotação agora.</h3>
-      <p>Respondemos em até 2 horas em dias úteis</p>
-    </div>
-    <a class="cta-btn" href="https://wa.me/5521974566127" target="_blank">
-      <svg width="15" height="15" viewBox="0 0 16 16" fill="none">
-        <path d="M13.5 2.5C12.2 1.2 10.4 0.5 8.5 0.5 4.4 0.5 1 3.8 1 7.9c0 1.3.3 2.6 1 3.7L1 15l4.5-1c1.1.6 2.3 1 3.5 1 4.1 0 7.5-3.3 7.5-7.5 0-1.9-.7-3.7-2-5z" stroke="white" stroke-width="1.2" fill="none"/>
-        <path d="M5.5 7.5s.5 1 1.5 2 2 1.5 2 1.5L10.5 9.5s1 .5 1.5.7V12s-2 1-4-0.5S4.5 7 4.5 6L6 5.5c.2.5.5 1.5.5 1.5z" fill="white"/>
-      </svg>
+<!-- DIVIDER: dark → amber -->
+<div class="sec-div" aria-hidden="true" style="background:var(--ink)">
+  <svg viewBox="0 0 1440 52" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"><path d="M0,52 L1440,0 L1440,52 Z" fill="#F0AD00"/><path d="M0,52 L720,16 L1440,0 L1440,52 Z" fill="#F0AD00" opacity=".45"/></svg>
+</div>
+
+<!-- CTA FINAL -->
+<section class="ctaf" aria-labelledby="cta-h">
+  <svg class="ctaf__deco" viewBox="0 0 1160 320" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false">
+    <!-- Círculos concêntricos top-right -->
+    <circle cx="1120" cy="60" r="220" fill="none" stroke="rgba(10,22,40,.09)" stroke-width="1.5"/>
+    <circle cx="1120" cy="60" r="150" fill="none" stroke="rgba(10,22,40,.07)" stroke-width="1"/>
+    <circle cx="1120" cy="60" r="80"  fill="none" stroke="rgba(10,22,40,.06)" stroke-width="1"/>
+    <!-- Cruz bottom-left -->
+    <line x1="72" y1="240" x2="72" y2="300" stroke="rgba(10,22,40,.18)" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="42" y1="270" x2="102" y2="270" stroke="rgba(10,22,40,.18)" stroke-width="1.5" stroke-linecap="round"/>
+    <!-- Pontilhado diagonal -->
+    <circle cx="200" cy="290" r="2.5" fill="rgba(10,22,40,.12)"/>
+    <circle cx="224" cy="278" r="2.5" fill="rgba(10,22,40,.10)"/>
+    <circle cx="248" cy="266" r="2.5" fill="rgba(10,22,40,.08)"/>
+    <circle cx="272" cy="254" r="2.5" fill="rgba(10,22,40,.06)"/>
+    <!-- Linhas diagonais fundo -->
+    <line x1="0"   y1="320" x2="180" y2="0"  stroke="rgba(10,22,40,.04)" stroke-width="1"/>
+    <line x1="40"  y1="320" x2="220" y2="0"  stroke="rgba(10,22,40,.03)" stroke-width="1"/>
+    <!-- Monograma JD ghost -->
+    <text x="50%" y="58%" text-anchor="middle" dominant-baseline="middle" font-family="'Barlow Condensed',sans-serif" font-weight="900" font-size="280" fill="rgba(10,22,40,.028)" letter-spacing="-8">JD</text>
+  </svg>
+  <div class="wrap">
+    <p class="ctaf__e">Pronto para começar?</p>
+    <h2 class="ctaf__h" id="cta-h">Solicite sua cotação agora.</h2>
+    <p class="ctaf__p">Respondemos em até 2 horas em dias úteis. Sem formulário, sem espera.</p>
+    <a href="https://wa.me/5521974566127?text=Olá%2C%20vim%20pelo%20site%20e%20quero%20uma%20cotação" class="btn-lg" target="_blank" rel="noopener noreferrer">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a5.5 5.5 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.554 4.115 1.524 5.844L.057 23.5l5.81-1.444A11.942 11.942 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.808 9.808 0 01-4.997-1.366l-.358-.213-3.447.856.873-3.367-.234-.376A9.787 9.787 0 012.182 12c0-5.424 4.394-9.818 9.818-9.818S21.818 6.576 21.818 12 17.424 21.818 12 21.818z"/></svg>
       Falar no WhatsApp
     </a>
   </div>
+</section>
 
-  <!-- FOOTER -->
-  <div class="folder-footer">
-    <div class="footer-logo">
-      <div class="footer-mark">
-        <svg width="16" height="16" viewBox="0 0 26 26" fill="none">
-          <rect x="4" y="3" width="6" height="20" rx="2" fill="#0F2744"/>
-          <rect x="4" y="15" width="9" height="4" rx="1.5" fill="#fff"/>
-          <path d="M14 3 Q24 3 24 13 Q24 23 14 23 L14 17 Q20 17 20 13 Q20 9 14 9 Z" fill="#0F2744"/>
-        </svg>
+<!-- FOOTER -->
+<footer class="ftr" aria-label="Rodapé">
+  <div class="wrap">
+    <div class="ftr__g">
+      <div class="ftr__brand">
+        <a href="#" class="logo" aria-label="JDuque Descartáveis">
+          <div class="logo__m" aria-hidden="true">
+            <svg width="26" height="26" viewBox="0 0 26 26" fill="none"><path d="M8 4h10l2 3H6L8 4z" fill="rgba(10,22,40,.35)"/><rect x="5" y="7" width="16" height="15" rx="2" fill="rgba(10,22,40,.25)"/><text x="7" y="19" font-family="sans-serif" font-weight="900" font-size="9" fill="rgba(10,22,40,.85)" letter-spacing="-0.5">JD</text></svg>
+          </div>
+          <div><span class="logo__n">JDuque</span><span class="logo__s">Descartáveis</span></div>
+        </a>
+        <p>Fornecedor carioca de sacos de lixo e descartáveis com entrega programada para condomínios e empresas no Rio de Janeiro.</p>
       </div>
-      <span class="footer-name"><span class="j">J</span>Duque Descartáveis</span>
+      <div>
+        <div class="ftr__h">Navegação</div>
+        <nav class="ftr__lk" aria-label="Links do rodapé">
+          <a href="#como-funciona">Como funciona</a>
+          <a href="#produtos">Produtos</a>
+          <a href="#por-que">Por que JDuque</a>
+          <a href="#faq">Dúvidas</a>
+          <a href="#contato">Contato</a>
+        </nav>
+      </div>
+      <div>
+        <div class="ftr__h">Contato</div>
+        <div class="ftr__ct">
+          <a href="https://wa.me/5521974566127" target="_blank" rel="noopener noreferrer">(21) 97456-6127</a>
+          <span>WhatsApp · Seg–Sex</span>
+          <span>Resposta em até 2h</span>
+        </div>
+        <div class="ftr__cov">
+          <div class="ftr__cov-lbl">Área de entrega</div>
+          <div class="ftr__cov-txt">Capital e interior do RJ · consulte disponibilidade</div>
+        </div>
+      </div>
     </div>
-    <span class="footer-info">Rio de Janeiro</span>
+    <div class="ftr__bot">
+      <strong>JDuque Descartáveis</strong>
+      <span class="ftr__sep">·</span>
+      <span>Rio de Janeiro, RJ</span>
+      <span class="ftr__sep">·</span>
+      <span>© 2026 · Todos os direitos reservados</span>
+    </div>
   </div>
+</footer>
 
-</div>
 <script>
-function toggleSz(btn, id) {
-  var panel = document.getElementById(id);
-  var section = btn.closest('.sz-section');
-  var allBtns = section.querySelectorAll('.sz-btn');
-  var allPanels = section.querySelectorAll('.sz-panel');
-  var isActive = btn.classList.contains('active');
-  allBtns.forEach(function(b){ b.classList.remove('active'); });
-  allPanels.forEach(function(p){ p.classList.remove('visible'); });
-  if (!isActive) {
-    btn.classList.add('active');
-    panel.classList.add('visible');
+(function () {
+  'use strict';
+
+  /* ═══════════════ HAMBURGUER ═══════════════ */
+  var hbg = document.getElementById('hbg');
+  var navOv = document.getElementById('nav-ov');
+
+  function openNav() {
+    navOv.hidden = false;
+    navOv.classList.add('open');
+    hbg.classList.add('open');
+    hbg.setAttribute('aria-expanded', 'true');
+    hbg.setAttribute('aria-label', 'Fechar menu');
+    document.body.style.overflow = 'hidden';
   }
-}
+
+  function closeNav() {
+    navOv.classList.remove('open');
+    hbg.classList.remove('open');
+    hbg.setAttribute('aria-expanded', 'false');
+    hbg.setAttribute('aria-label', 'Abrir menu');
+    document.body.style.overflow = '';
+    setTimeout(function () { navOv.hidden = true; }, 300);
+  }
+
+  hbg.addEventListener('click', function () {
+    navOv.hidden ? openNav() : closeNav();
+  });
+
+  navOv.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', closeNav);
+  });
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !navOv.hidden) closeNav();
+  });
+
+  /* ═══════════════ NAV ATIVO ═══════════════ */
+  var navLinks = document.querySelectorAll('.nav a[href^="#"]');
+  var sections = document.querySelectorAll('section[id], div[id]');
+
+  if ('IntersectionObserver' in window) {
+    var navIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var id = en.target.id;
+        navLinks.forEach(function (a) {
+          a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+        });
+      });
+    }, { rootMargin: '-35% 0px -55% 0px' });
+    sections.forEach(function (s) { navIO.observe(s); });
+  }
+
+  /* ═══════════════ BAG VISUALIZER ═══════════════ */
+  var VOLS = {
+    p100: { bw:105, bh:148, dim:'75 × 105 cm',  ref:'Lixeira de cozinha',       sc:25 },
+    p200: { bw:126, bh:182, dim:'90 × 130 cm',  ref:'Contêiner de corredor',    sc:60 },
+    p240: { bw:140, bh:197, dim:'100 × 140 cm', ref:'Condomínio grande porte',  sc:80 },
+    p300: { bw:155, bh:215, dim:'110 × 150 cm', ref:'Grandes galpões',          sc:100 },
+    e40:  { bw:70,  bh:84,  dim:'50 × 60 cm',   ref:'Banheiro e copa',          sc:0 },
+    e60:  { bw:83,  bh:87,  dim:'59 × 62 cm',   ref:'Cozinha e serviço',        sc:18 },
+    e100: { bw:105, bh:148, dim:'75 × 105 cm',  ref:'Corredor e hall',          sc:45 },
+    e200: { bw:126, bh:182, dim:'90 × 130 cm',  ref:'Contêiner coleta geral',   sc:82 }
+  };
+
+  function updateBag(art, id) {
+    var v = VOLS[id];
+    if (!v) return;
+    var body  = art.querySelector('.bag-body');
+    var neck  = art.querySelector('.bag-neck');
+    var knot  = art.querySelector('.bag-knot');
+    var dims  = art.querySelector('.bag-dims');
+    var ref   = art.querySelector('.bag-ref');
+    var fill  = art.querySelector('.bag-scale__fill');
+    if (!body) return;
+
+    body.style.setProperty('--bw', v.bw + 'px');
+    body.style.setProperty('--bh', v.bh + 'px');
+    neck.style.setProperty('--bn', Math.round(v.bw * 0.52) + 'px');
+    knot.style.setProperty('--bk', Math.round(v.bw * 0.28) + 'px');
+    if (fill) fill.style.width = v.sc + '%';
+
+    dims.style.opacity = '0';
+    ref.style.opacity  = '0';
+    setTimeout(function () {
+      dims.textContent = v.dim;
+      ref.textContent  = '≈ ' + v.ref;
+      dims.style.opacity = '1';
+      ref.style.opacity  = '1';
+    }, 180);
+  }
+
+  /* ═══════════════ TABS ═══════════════ */
+  document.querySelectorAll('.tabs').forEach(function (tl) {
+    var art = tl.closest('article');
+    var first = tl.querySelector('.tab.on');
+    if (first) updateBag(art, first.dataset.t);
+
+    tl.addEventListener('click', function (e) {
+      var b = e.target.closest('.tab');
+      if (!b) return;
+      tl.querySelectorAll('.tab').forEach(function (x) {
+        x.classList.remove('on');
+        x.setAttribute('aria-selected', 'false');
+      });
+      b.classList.add('on');
+      b.setAttribute('aria-selected', 'true');
+      art.querySelectorAll('.pnl').forEach(function (p) { p.classList.remove('on'); });
+      var t = document.getElementById(b.dataset.t);
+      if (t) t.classList.add('on');
+      updateBag(art, b.dataset.t);
+    });
+
+    tl.addEventListener('keydown', function (e) {
+      if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+      var ts = Array.from(tl.querySelectorAll('.tab'));
+      var i  = ts.indexOf(document.activeElement);
+      if (i === -1) return;
+      var n = e.key === 'ArrowRight' ? (i + 1) % ts.length : (i - 1 + ts.length) % ts.length;
+      ts[n].focus();
+      ts[n].click();
+    });
+  });
+
+  /* ═══════════════ FAQ ACCORDION ═══════════════ */
+  document.querySelectorAll('.faq-q').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      // Fecha todos
+      document.querySelectorAll('.faq-item.open').forEach(function (i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+      // Abre o clicado (se estava fechado)
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+
+  /* ═══════════════ SCROLL REVEAL ═══════════════ */
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) {
+      es.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        setTimeout(function () { en.target.classList.add('in'); }, parseInt(en.target.dataset.d || 0));
+        io.unobserve(en.target);
+      });
+    }, { threshold: .08 });
+    document.querySelectorAll('.rv').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.rv').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* Safety fallback: se após 2s algum .rv ainda não virou .in, força */
+  setTimeout(function () {
+    document.querySelectorAll('.rv:not(.in)').forEach(function (el) { el.classList.add('in'); });
+  }, 2000);
+
+  /* ═══════════════ METRIC COUNTERS ═══════════════ */
+  (function () {
+    var mets = document.querySelectorAll('.met__v[data-mt]');
+    if (!mets.length || !('IntersectionObserver' in window)) return;
+    var fired = false;
+    var cio = new IntersectionObserver(function (entries) {
+      if (fired || !entries.some(function (e) { return e.isIntersecting; })) return;
+      fired = true;
+      cio.disconnect();
+      mets.forEach(function (el) {
+        var type = el.dataset.mt;
+        if (type === 'count') {
+          var to     = parseInt(el.dataset.to, 10);
+          var suffix = el.dataset.suffix || '';
+          var dur    = 1200;
+          var t0     = performance.now();
+          (function tick(now) {
+            var p  = Math.min((now - t0) / dur, 1);
+            var ez = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(ez * to) + suffix;
+            if (p < 1) requestAnimationFrame(tick);
+          }(performance.now()));
+        } else if (type === 'word') {
+          var chars = (el.dataset.word || '').split('');
+          var idx   = 0;
+          el.textContent = '';
+          var iv = setInterval(function () {
+            el.textContent += chars[idx];
+            idx++;
+            if (idx >= chars.length) clearInterval(iv);
+          }, 75);
+        }
+      });
+    }, { threshold: 0.55 });
+    mets.forEach(function (el) { cio.observe(el); });
+  }());
+
+}());
 </script>
 </body>
 </html>
